@@ -2,6 +2,24 @@ body {
     background-color: #F9FAFC;
 }
 
+#navbar-bg-color {
+    background-color: #98FC03;
+}
+
+
+#main-logo {
+    color: #000000;
+}
+
+
+.footer-color {
+    background-color: #98FC03;
+}
+
+.footer-color > p > i {
+    color: #000000;
+
+}
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
