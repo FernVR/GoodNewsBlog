@@ -9,7 +9,9 @@ body {
     background-color: #98FC03;
 }
 
-
+#user-posts{
+    padding: 50px;
+}
 .footer-color {
     background-color: #98FC03;
 }
@@ -48,6 +50,17 @@ body {
     color: antiquewhite;
 }
 
+.article-section-quote {
+    padding: 50px;
+}
+
+.article-section-quote>p {
+    color: #FF44A7;
+    text-align: center;
+    padding: 70px;
+    font-size: 130%;
+}
+
 .thin {
     font-weight: 300;
 }
@@ -78,7 +91,8 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-color: #FF44A7;
+    border-radius: 2rem;
 }
 
 .scale {
@@ -140,8 +154,9 @@ body {
     border-radius: 2rem;
     padding: 15px;
     font-weight: 600;
-    background-color: #98FC03;
+    background-color: #FF44A7;
     border: 0;
+    margin-top: 30px;
 }
 
 .post-title {
@@ -213,5 +228,9 @@ body {
     .landing-banner {
         background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft-small-screen.png);
         padding: 100px;
+    }
+
+    .article-section-quote {
+        padding: 5px;
     }
 }
