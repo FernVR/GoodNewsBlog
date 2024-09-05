@@ -9,9 +9,6 @@ body {
     background-color: #98FC03;
 }
 
-#user-posts{
-    padding: 50px;
-}
 .footer-color {
     background-color: #98FC03;
 }
@@ -37,7 +34,6 @@ body {
     color: #000;
 }
 
-
 .landing-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft-2.jpg);
     padding: 150px;
@@ -48,6 +44,10 @@ body {
     text-align: center;
     font-size: 150%;
     color: antiquewhite;
+}
+
+.article-list {
+    padding-top: 30px;
 }
 
 .article-section-quote {
