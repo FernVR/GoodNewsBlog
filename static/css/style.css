@@ -31,6 +31,18 @@ body {
     color: #E84610;
 }
 
+.landing-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft-2.jpg);
+    padding: 150px;
+}
+
+.landing-banner>p {
+    padding: 0;
+    text-align: center;
+    font-size: 150%;
+    color: antiquewhite;
+}
+
 .thin {
     font-weight: 300;
 }
@@ -44,12 +56,12 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #000;
 }
 
 .card {
     border: none;
-    background-color: transparent;
+    background-color: #fff;
 }
 
 .image-container {

@@ -3,7 +3,14 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
+
+<!-- Landing Banner Img -->
+<section class="landing-banner container-fluid">
+    <!-- Landing Img here with a quote -->
+     <p> this is the quote on the landing banner </p>
+</section>
+
+<div class="container">
     <div class="row">
 
         <!-- Blog Entries Column -->
@@ -15,7 +22,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">by: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="#" class="post-link">
