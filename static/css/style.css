@@ -189,3 +189,13 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+
+/* ----------------------------------------------------- Media Queries */
+
+@media screen and (max-width: 450px) {
+    .landing-banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft-small-screen.png);
+        padding: 100px;
+    }
+}
