@@ -7,7 +7,7 @@
 <!-- Landing Banner Img -->
 <section class="landing-banner container-fluid">
     <!-- Landing Img here with a quote -->
-     <p> this is the quote on the landing banner </p>
+    <p> this is the quote on the landing banner </p>
 </section>
 
 <div class="container article-list">
@@ -26,6 +26,7 @@
                             </div>
                             <a href="#" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
                             </a>
 
                             <hr />
@@ -46,8 +47,13 @@
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+            </li>
+            {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link next-btn" > NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link next-btn"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
@@ -55,12 +61,13 @@
 </div>
 
 <div class="article-section-quote">
-    <p>“Journalism is about results. It's about affecting your community or society in the most progressive way.” - Anas Aremeyaw Anas</p>
+    <p>“Journalism is about results. It's about affecting your community or society in the most progressive way.” - Anas
+        Aremeyaw Anas</p>
 </div>
 
 <div id="user-posts">
     <!-- This is where authenticated users can add posts of their own -->
-     <!-- Section will only be accessible to authenticated users, if user is unregistered it will ask if they want to register/ login -->
+    <!-- Section will only be accessible to authenticated users, if user is unregistered it will ask if they want to register/ login -->
 </div>
 
 <!-- index.html content ends here -->
