@@ -70,7 +70,10 @@ body {
 }
 
 .add-post-link-box {
-    
+    border: 1px solid white;
+    border-radius: 2em;
+    padding: 15px;
+    line-height: 50px;
 }
 
 
