@@ -65,10 +65,15 @@
         Aremeyaw Anas</p>
 </div>
 
+{% if user.is_authenticated %}
 <div id="user-posts">
     <!-- This is where authenticated users can add posts of their own -->
     <!-- Section will only be accessible to authenticated users, if user is unregistered it will ask if they want to register/ login -->
+     <p>
+        Test 
+     </p>
 </div>
+{% endif %}
 
 <!-- index.html content ends here -->
 {% endblock %}

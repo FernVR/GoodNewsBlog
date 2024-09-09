@@ -33,9 +33,15 @@
         <div class="col-12 d-flex add-post-content">
             <p class="add-post-link-box">
                 Thanks for reading! <br>
+                {% if user.is_authenticated %}
                 <a href="#" class="add-post-link">
                     Share a story here
                 </a>
+                {% else %}
+                <a href="#">
+                    Sign Up to share your own story
+                </a>
+                {% endif %}
             </p>
             <p>
                 Quote about inspiring creativity through truth and happiness?
