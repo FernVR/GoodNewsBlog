@@ -7,6 +7,7 @@ class ContactForm(models.Model):
     email_address = models.EmailField(max_length=200)
     feedback_message = models.TextField()
     updated_on = models.DateTimeField(auto_now=True)
+    read = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.full_name
+        return f"Contact form message from {self.name}"
