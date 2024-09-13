@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'django_summernote',
     'blog',
     'about',
-    'contact',
 ]
 
 SITE_ID = 1
