@@ -84,6 +84,9 @@ body {
 
 /* -------------------------------------------------------------- Organise all this */
 
+.card-info {
+    justify-content: space-between;
+}
 
 .thin {
     font-weight: 300;
