@@ -82,6 +82,17 @@ body {
     color: #FF44A7;
 }
 
+#about-img-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
+    
+}
+
+/* ------------------------------------------------------------------- Temporarily pushing contact form lower down */
+
+#contact {
+    margin-top: 200px;
+}
+
 /* -------------------------------------------------------------- Organise all this */
 
 .card-info {

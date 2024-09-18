@@ -35,7 +35,7 @@ body {
 }
 
 .landing-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft-2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
     padding: 150px;
 }
 
@@ -82,10 +82,20 @@ body {
     color: #FF44A7;
 }
 
+.about-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
+    
+}
+
 /* -------------------------------------------------------------- Organise all this */
 
 .card-info {
     justify-content: space-between;
+}
+
+.image-container {
+    margin-bottom: 30px;
+    width: 80%;
 }
 
 .thin {
@@ -116,7 +126,7 @@ body {
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 30%;
+    
     left: -2px;
     background-color: #FF44A7;
     border-radius: 2rem;
@@ -134,16 +144,11 @@ body {
 }
 
 .masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
+    margin-top: 20px;
 }
 
 .masthead-text {
-    background-color: #3b4a5a;
+    background-color: #FF44A7;
     color: white;
     position: relative;
 }
@@ -153,19 +158,7 @@ body {
     overflow: hidden;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
+
 
 .post-link {
     text-decoration: none;
