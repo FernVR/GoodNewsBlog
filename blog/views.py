@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.contrib import messages
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, UserPostForm
 
 # Create your views here.
 
@@ -43,7 +43,19 @@ def post_detail(request, slug):
                 'Comment submitted and awaiting approval'
             )
     
+    if request.method == "POST":
+        user_post_form = UserPostForm(data=request.POST)
+        if user_post_form.is_valid():
+            post = user_post_form.save(commit=False)
+            post.author = request.user
+            post.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Your post has been submitted and awaiting approval'
+            )
+    
     comment_form = CommentForm()
+    user_post_form = UserPostForm()
 
     return render(
         request,
@@ -53,5 +65,6 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "user_post_form": user_post_form,
             },
     )

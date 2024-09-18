@@ -72,6 +72,7 @@
             </div>
         </div>
     </div>
+
     <!-- Creating New Comments -->
     <div class="col-md-4 card mb-4 mt-3">
         <div class="card-body">
@@ -88,16 +89,25 @@
             {% endif %}
         </div>
     </div>
+
+    <!-- Creating User Posts -->
     <div class="row">
         <div class="col-12 d-flex add-post-content">
+            {% if user.is_authenticated %}
+            <div>
+                This is where the logged in user can create their own post.
+                <form id="userPostForm" method="post">
+                    {{ user_post_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+
+            
+            </div>
+            {% else %}
             <p class="add-post-link-box">
                 Thanks for reading! <br>
-                {% if user.is_authenticated %}
-                <a href="#" class="add-post-link">
-                    Share a story here
-                </a>
-                {% else %}
-                <a href="#">
+                <a href="{% url 'account_signup' %}">
                     Sign Up to share your own story
                 </a>
                 {% endif %}
