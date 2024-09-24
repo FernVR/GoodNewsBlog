@@ -13,7 +13,7 @@ class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    excerpt = models.TextField(blank=True)
+    excerpt = models.CharField(max_length=500, unique=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -24,6 +24,8 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
+
+
 
 
 class Comment(models.Model):
@@ -46,6 +48,6 @@ class Comment(models.Model):
 
 class Profile(models.Model): 
     user = models.OneToOneField(User, on_delete=models.CASCADE) 
-    avatar = CloudinaryField('image', default='placeholder') 
+    profile_img = CloudinaryField('image', default='placeholder') 
     bio = models.TextField() 
     def __str__(self): return self.user.username

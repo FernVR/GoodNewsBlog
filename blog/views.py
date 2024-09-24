@@ -118,6 +118,19 @@ def user_profile(request):
     pk = request.user
     profile = Profile.objects.all()
     obj = get_object_or_404(profile, pk=1)
+
+    if request.method == "POST":
+        user_post_form = UserPostForm(data=request.POST)
+        if user_post_form.is_valid():
+            post = user_post_form.save(commit=False)
+            post.author = request.user
+            post.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Your post has been submitted and awaiting approval'
+            )
+
+    user_post_form = UserPostForm()
     
     return render(
         request,

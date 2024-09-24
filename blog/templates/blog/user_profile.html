@@ -1,6 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
 
-test
+<div class="row">
+    <div class="col-6 user-info">
+        <div class="profile-img">
+            {% if "placeholder" in profile.featured_image.url %}
+            <img class="card-img-top" src="{% static 'images/feat-img-example.png' %}" alt="placeholder image">
+            {% else %}
+            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+            {% endif %}
+
+        </div>
+        <div>
+            <ul>
+                <li>
+                    username: {{ user.username }}
+                </li>
+                <li>
+                    first name : 
+                </li>
+                <li>
+                    bio:
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+</div>
+
+
 
 {% endblock %}
