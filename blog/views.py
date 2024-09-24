@@ -116,8 +116,8 @@ def user_profile(request):
     """
     """
     pk = request.user
-    queryset = Profile.objects()
-    obj = get_object_or_404(MyModel, pk=1)
+    profile = Profile.objects.all()
+    obj = get_object_or_404(profile, pk=1)
     
     return render(
         request,
