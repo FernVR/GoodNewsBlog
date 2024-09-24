@@ -6,20 +6,20 @@
 <section id="about-section">
     <div class="container mt-5 about-content ">
         <div class="row">
-            <div class="col-4 text-center">
-                {% if "placeholder" in about.profile_image.url %}
-                <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" width="75%" alt="placeholder image">
-                {% else %}
-                <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
-                {% endif %}
-            </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <!-- Title goes between these h2 tags -->
                 <h2>
                     {{ about.title }}
                 </h2>
                 <!-- Content goes directly underneath this -->
                 {{ about.content | safe }}
+            </div>
+            <div class="col-4 text-center">
+                {% if "placeholder" in about.profile_image.url %}
+                <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" width="75%" alt="placeholder image">
+                {% else %}
+                <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
+                {% endif %}
             </div>
         </div>
         <div class="row">
@@ -37,15 +37,10 @@
 <section id="contact">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>I believe in the power of shared knowledge and collective effort.
-                Whether you have a project in mind, wish to co-author
-                an article, or simply want to brainstorm some ideas,
-                I'm excited to hear from you. Fill out the form
-                and we can get the ball rolling!</p>
+            <h2>Please Leave Any Feedback you might have!
+                We always want to hear from you.
+            </h2>
 
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}

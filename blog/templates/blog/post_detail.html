@@ -13,7 +13,8 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" class="scale" alt="placeholder image">
+                <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" class="scale"
+                    alt="placeholder image">
                 {% else %}
                 <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
                 {% endif %}
@@ -46,56 +47,60 @@
         </div>
     </div>
     <!-- Displaying Comments -->
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="d-flex comment-section">
+        <div class="card comment-box col-8 ">
             <h3>Comments:</h3>
             <div class="card-body">
+
                 <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
                 {% for comment in comments %}
+                <hr class="comment-break">
+                {% if not comment.approved and comment.author == user %}
+                <p class="approval">
+                    your comment needs approval
+                </p>
+                {% endif %}
                 <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
                     <p class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class="font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
+                        {{ comment.author }} :
                     </p>
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
+                        on: {{ comment.created_on }}
                     </div>
-                    {% if not comment.approved and comment.author == user %}
-                    <p class="approval">
-                        This comment is awaiting approval
-                    </p>
-                    {% endif %}
+
+
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    <div class="d-flex comment-edit-btns">
+                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    </div>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-    </div>
 
-    <!-- Creating New Comments -->
-    <div class="col-md-4 card mb-4 mt-3">
-        <div class="card-body">
-            {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% else %}
-            <p><a href="{% url 'account_login' %}">Log in</a>
-                to leave a comment</p>
-            {% endif %}
+        <!-- Creating New Comments -->
+        <div class=" card comment-box">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p><a href="{% url 'account_login' %}">Log in</a>
+                    to leave a comment</p>
+                {% endif %}
+            </div>
         </div>
     </div>
     <!-- Delete confirmation modal -->
@@ -125,12 +130,10 @@
             <div>
                 This is where the logged in user can create their own post.
                 <form id="userPostForm" method="post">
-                    {{ user_post_form | crispy }}
+                    {{ user_post_form | crispy}}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
-
-
             </div>
             {% else %}
             <p class="add-post-link-box">
