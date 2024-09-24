@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Profile
 from .forms import CommentForm, UserPostForm
 
 # Create your views here.
@@ -110,3 +110,19 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def user_profile(request):
+    """
+    """
+    pk = request.user
+    queryset = Profile.objects()
+    obj = get_object_or_404(MyModel, pk=1)
+    
+    return render(
+        request,
+        "blog/user_profile.html",
+        {
+            'profile': profile
+            },
+    )
