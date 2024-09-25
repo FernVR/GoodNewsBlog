@@ -5,21 +5,30 @@
 
 <section id="profile-page-banner" class="landing-banner container-fluid"></section>
 
-<section id="profile-information">
-    <div class="container">
-        <div class="profile-card">
-            <div class="profile-box">
-                <div class="profile-pic">
-                    {% if 'placeholder' in user.profile.profile_img.url %}
-                    <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" class="scale"
-                        alt="Profile Placeholder">
-                    {% else %}
-                    <img src="{{ user.profile.profile_img.url }}" class="img-radius w-25 mb-5" alt="Profile Picture"
-                        loading="lazy">
-                    {% endif %}
+
+<div class="container mt-5"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Profile Picture -->
+            <div class="card text-center">
+                <img src="{% if user.profile.profile_img %}{{ user.profile.profile_img.url }}{% else %}{% static 'default-avatar.png' %}{% endif %}" 
+                     class="card-img-top rounded-circle mt-3 mx-auto" 
+                     alt="Profile Picture" 
+                     style="width: 150px; height: 150px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ request.user.username }}</h5>
+                    <p class="card-text">{{ request.user.email }}</p>
                 </div>
-                <div class="profile-info">
-                    <ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <!-- User Information -->
+            <div class="card">
+                <div class="card-header">
+                    <h4>User Information</h4>
+                </div>
+                <div class="card-body">
+                    <ul></ul>
                         <li>
                             username: {{ user.username }}
                         </li>
@@ -43,7 +52,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
 
