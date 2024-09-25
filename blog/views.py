@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.db.models import Count 
 from django.views import generic
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Profile
@@ -144,3 +146,36 @@ def user_profile(request):
 
 def custom_404_view(request, exception):
     return render(request, '404.html', status=404)
+
+
+
+@login_required
+def profile_update_view(request):
+    if request.method == 'POST':
+        user_form = UserUpdateForm(request.POST, instance=request.user)
+        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Your profile has been updated!')
+            return redirect('profile')
+
+    else:
+        user_form = UserUpdateForm(instance=request.user)
+        profile_form = ProfileUpdateForm(instance=request.user.profile)
+
+    return render(request, 'profile_update.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
+
+@login_required
+def profile_delete_view(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        messages.success(request, 'Your profile has been deleted.')
+        return redirect('home')  # Redirect to home after deletion
+
+    return render(request, 'profile_delete.html')
