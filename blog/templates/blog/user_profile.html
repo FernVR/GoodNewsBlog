@@ -19,10 +19,16 @@
                     username: {{ user.username }}
                 </li>
                 <li>
-                    first name : 
+                    first name : {{ user.first_name }}
                 </li>
                 <li>
-                    bio:
+                    last name : {{ user.last_name }}
+                </li>
+                <li>
+                    email : {{ user.email }}
+                </li>
+                <li>
+                    bio: {{ user.profile.bio }}
                 </li>
 
             </ul>
