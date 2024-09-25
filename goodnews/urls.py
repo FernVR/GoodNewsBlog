@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from blog.views import custom_404_view
 
 
 urlpatterns = [
@@ -26,3 +27,6 @@ urlpatterns = [
     path("", include("blog.urls"), name="blog-urls"),
     
 ]
+
+
+handler404 = 'blog.views.custom_404_view'

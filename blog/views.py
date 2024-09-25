@@ -140,3 +140,7 @@ def user_profile(request):
             'profile': profile
             },
     )
+
+
+def custom_404_view(request, exception):
+    return render(request, '404.html', status=404)

@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-fernvr-goodnewsblog-wvehqd4lm73.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-fernvr-goodnewsblog-wvehqd4lm73.ws.codeinstitute-ide.net', '.herokuapp.com', 'localhost', '127.0.0.1', ]
 
 
 # Application definition
