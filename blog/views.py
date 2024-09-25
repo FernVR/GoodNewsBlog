@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.db.models import Count 
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -8,7 +9,7 @@ from .forms import CommentForm, UserPostForm
 # Create your views here.
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments')).order_by("-created_on")
     template_name = "blog/index.html"
     paginate_by = 2
 
