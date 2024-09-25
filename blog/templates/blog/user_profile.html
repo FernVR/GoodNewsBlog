@@ -4,39 +4,36 @@
 {% load crispy_forms_tags %}
 
 <div class="row">
-    <div class="col-6 user-info">
-        <div class="profile-img">
-            {% if "placeholder" in profile.featured_image.url %}
-            <img class="card-img-top" src="{% static 'images/feat-img-example.png' %}" alt="placeholder image">
-            {% else %}
-            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
-            {% endif %}
-
-        </div>
-        <div>
-            <ul>
-                <li>
-                    username: {{ user.username }}
-                </li>
-                <li>
-                    first name : {{ user.first_name }}
-                </li>
-                <li>
-                    last name : {{ user.last_name }}
-                </li>
-                <li>
-                    email : {{ user.email }}
-                </li>
-                <li>
-                    bio: {{ user.profile.bio }}
-                </li>
-
-            </ul>
-        </div>
+    <div class="col-md-6">
+        {% if 'placeholder' in user.profile.profile_img.url %}
+        <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" class="scale" alt="Profile Placeholder">
+        {% else %}
+        <img src="{{ user.profile.profile_img.url }}" class="img-radius w-25 mb-5" alt="Profile Picture" loading="lazy">
+        {% endif %}
     </div>
-    <div class="col-6">
-
+    <div class="col-md-6">
+        <ul>
+            <li>
+                username: {{ user.username }}
+            </li>
+            <li>
+                first name : {{ user.first_name }}
+            </li>
+            <li>
+                last name : {{ user.last_name }}
+            </li>
+            <li>
+                email : {{ user.email }}
+            </li>
+            <li>
+                location: {{ user.profile.location }}
+            </li>
+            <li>
+                bio: {{ user.profile.bio }}
+            </li>
+        </ul>
     </div>
+
 </div>
 
 
