@@ -66,7 +66,7 @@ body {
     color: #fff;
     text-align: center;
     justify-content: space-evenly;
-    margin: 20px 0;
+    margin: 200px 0 50px 0;
 }
 
 .add-post-link-box {
@@ -91,6 +91,12 @@ body {
 
 #contact {
     margin-top: 200px;
+}
+
+/*------------------------------------------------------------------------------ Profile pic */
+
+.profile-box {
+    display: flex;
 }
 
 /* -------------------------------------------------------------- Organise all this */
@@ -121,8 +127,17 @@ body {
 }
 
 .card {
-    border: none;
     background-color: #fff;
+    border-radius: 2rem;
+}
+
+.comment-box{
+    background-color: #FF44A7;
+    padding: 10px;
+}
+
+.comment-section {
+    justify-content: space-around;
 }
 
 .image-container {
@@ -197,8 +212,8 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
-    color: #fff;
+    background-color: #F9FAFC;
+    color: #000;
 }
 
 .btn-signup:hover,
@@ -226,7 +241,7 @@ body {
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #000;
 }
 
 .btn-like:hover,
@@ -237,11 +252,25 @@ body {
 }
 
 .faded {
-    color: rgb(172, 175, 175);
+    color: rgb(253, 255, 255);
 }
 
 .approval {
-    color: rgb(222, 146, 168);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.comment-break {
+    color: #000;
+}
+
+.comment-submit{
+    text-align: center;
+}
+
+.comment-edit-btns {
+    margin-top: 10px;
+    gap: 10px;
 }
 
 
