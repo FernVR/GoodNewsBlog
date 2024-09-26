@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment, Profile
+from .models import Post, Comment, Profile, Like
 from .forms import CommentForm, UserPostForm
 import bleach
 
@@ -46,17 +46,6 @@ def post_detail(request, slug):
             messages.add_message(
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
-            )
-    
-    if request.method == "POST":
-        user_post_form = UserPostForm(data=request.POST)
-        if user_post_form.is_valid():
-            post = user_post_form.save(commit=False)
-            post.author = request.user
-            post.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Your post has been submitted and awaiting approval'
             )
     
     comment_form = CommentForm()
@@ -116,6 +105,37 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+@login_required
+def like_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    like, created = Like.objects.get_or_create(user=request.user, post=post)
+
+    # Toggle like/dislike
+    if created:  # If a new like is created
+        like.like_type = True  # This means the user liked the post
+        like.save()
+    else:  # If the user already liked/disliked the post
+        like.delete()  # Remove the like/dislike
+        return redirect('post_detail', post_id=post.id)
+
+    return redirect('post_detail', post_id=post.id)
+
+@login_required
+def dislike_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    like, created = Like.objects.get_or_create(user=request.user, post=post)
+
+    # Toggle dislike
+    if created:  # If a new dislike is created
+        like.like_type = False  # This means the user disliked the post
+        like.save()
+    else:  # If the user already liked/disliked the post
+        like.delete()  # Remove the like/dislike
+        return redirect('post_detail', post_id=post.id)
+
+    return redirect('post_detail', post_id=post.id)
+
+
 def user_profile(request):
     """
     View for displaying the user profile and handling new post submissions.
@@ -173,6 +193,8 @@ def profile_update_view(request):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
+
 
 @login_required
 def profile_delete_view(request):

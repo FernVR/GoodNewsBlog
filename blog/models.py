@@ -27,7 +27,6 @@ class Post(models.Model):
 
 
 
-
 class Comment(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="commenter"
@@ -44,6 +43,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment: ' {self.body} ' by {self.author}"
+
+
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    like_type = models.BooleanField(default=True)  # True for like, False for dislike
+
+    class Meta:
+        unique_together = (
+            'user', 'post')  # Prevent multiple likes/dislikes from the same user
 
 
 
