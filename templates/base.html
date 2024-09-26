@@ -30,6 +30,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <!-- Summernote -->
+    <link href="{% static 'django_summernote/summernote.css' %}" rel="stylesheet">
+    <script src="{% static 'django_summernote/summernote.min.js' %}"></script>
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -138,8 +141,11 @@
     </script>
     <!-- Font awesome icons -->
     <script src="https://kit.fontawesome.com/f5f9306f1c.js" crossorigin="anonymous"></script>
-    
+
     {% block extras %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Make sure jQuery is included -->
+    <script src="{% static 'django_summernote/summernote.min.js' %}"></script>
+    <script src="{% static 'js/summernote-init.js' %}"></script> <!-- Your separate JS file -->
     {% endblock %}
 </body>
 

@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Profile
 from .forms import CommentForm, UserPostForm
+import bleach
 
 # Create your views here.
 
@@ -117,30 +118,33 @@ def comment_delete(request, slug, comment_id):
 
 def user_profile(request):
     """
+    View for displaying the user profile and handling new post submissions.
     """
-    pk = request.user
-    profile = Profile.objects.all()
-    obj = get_object_or_404(profile, pk=1)
+    # Get the logged-in user's profile
+    profile = get_object_or_404(Profile, user=request.user)
 
     if request.method == "POST":
         user_post_form = UserPostForm(data=request.POST)
         if user_post_form.is_valid():
             post = user_post_form.save(commit=False)
-            post.author = request.user
+            post.author = request.user  # Set the author to the logged-in user
             post.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Your post has been submitted and awaiting approval'
+                'Your post has been submitted and is awaiting approval.'
             )
+            return redirect('user_profile')  # Redirect to the user profile page after saving
 
-    user_post_form = UserPostForm()
-    
+    else:
+        user_post_form = UserPostForm()  # Initialize an empty form for GET requests
+
     return render(
         request,
         "blog/user_profile.html",
         {
-            'profile': profile
-            },
+            'profile': profile,
+            'user_post_form': user_post_form,  # Pass the form to the template
+        },
     )
 
 
