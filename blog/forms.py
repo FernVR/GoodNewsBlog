@@ -7,6 +7,16 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+    
+    def __init__(self, *args, **kwargs):
+        super(CommentForm, self).__init__(*args, **kwargs)
+        self.fields['body'].widget.attrs.update({
+            
+            'class': 'form-control',  # Bootstrap styling
+            'style': 'border-radius: 2em', # Border radius
+            'style': 'height: 120px;',  # Adjust the height
+            
+        })
 
 
 class UserPostForm(forms.ModelForm):

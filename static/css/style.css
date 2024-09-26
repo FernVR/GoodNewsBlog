@@ -76,6 +76,15 @@ body {
     line-height: 50px;
 }
 
+/*--------------------------------------------------------------- Comment styles */
+.commenter {
+    justify-content: flex-end;
+}
+.commenter-img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 /* -------------------------------------------------------------- About content */
 
 .about-content {

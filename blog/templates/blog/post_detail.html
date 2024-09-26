@@ -47,7 +47,7 @@
         </div>
     </div>
     <!-- Displaying Comments -->
-    <div class="d-flex comment-section">
+    <div class="d-flex comment-section justify-content-start">
         <div class="card comment-box col-8 ">
             <h3>Comments:</h3>
             <div class="card-body">
@@ -62,13 +62,28 @@
                 </p>
                 {% endif %}
                 <div class="p-2 comments
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}">
-                    <p class="font-weight-bold">
-                        {{ comment.author }} :
-                    </p>
+                {% if not comment.approved and comment.author == user %}
+                faded
+                {% elif not comment.approved %} 
+                d-none
+                {% endif %}">
+
+                    <!-- The commenter information -->
+                    <div class="commenter d-flex align-items-center justify-content-start">
+                        <img src="{% if comment.author.profile.profile_img %}{{ comment.author.profile.profile_img.url }}
+                        {% else %}
+                        {% static 'images/feat-img-example.png' %}{% endif %}" class="rounded-circle me-2 "
+                            style="width: 50px; height: 50px; object-fit: cover;" alt="Profile Picture">
+
+                        <p class="font-weight-bold mb-0">
+                            {{ comment.author }} :
+                        </p>
+                        <p class="mb-0 ms-2" style="line-height: 1.5;">
+                            <!-- Adjust line-height if needed -->
+                            {{ comment.body }}
+                        </p>
+                    </div>
                     <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
                         on: {{ comment.created_on }}
                     </div>
 
@@ -86,23 +101,36 @@
         </div>
 
         <!-- Creating New Comments -->
-        <div class=" card comment-box">
+        <div class=" card comment-box ms-4">
             <div class="card-body">
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <!-- Posting as section with user's profile image -->
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{% if user.profile.profile_img %}{{ user.profile.profile_img.url }}{% else %}{% static 'images/feat-img-example.png' %}{% endif %}"
+                        class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;"
+                        alt="Profile Picture">
+                    <p class="mb-0">Posting as: {{ user.username }}</p>
+                </div>
+                <!-- Comment Form -->
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg mt-2">Submit</button>
                 </form>
                 {% else %}
-                <p><a href="{% url 'account_login' %}">Log in</a>
-                    to leave a comment</p>
+                <p><a href="{% url 'account_login' %}">
+                    Log in
+                </a>
+                    to leave a comment
+                </p>
                 {% endif %}
             </div>
         </div>
+
+
     </div>
+
     <!-- Delete confirmation modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
