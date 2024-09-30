@@ -206,7 +206,6 @@ def profile_delete_view(request):
     return render(request, 'blog/profile_delete.html')
 
 
-
 @login_required
 def post_delete(request, slug):
     post = get_object_or_404(Post, slug=slug, author=request.user)
