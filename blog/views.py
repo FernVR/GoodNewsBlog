@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.db.models import Count 
+from django.db.models import Count, Q
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -12,7 +12,7 @@ import bleach
 # Create your views here.
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments')).order_by("-created_on")
+    queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments', filter=Q(comments__approved=True))).order_by("-created_on")
     template_name = "blog/index.html"
     paginate_by = 2
 
