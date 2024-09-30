@@ -233,7 +233,7 @@ Include info of unresolved bugs documented in issues - inlcude screenshot of iss
 LINK TO TESTING.md FILE
 
 ## Technologies Used
-## Languages Used
+### Languages Used
 
 * [Python](https://www.python.org/doc/)
 * [Django](https://www.djangoproject.com/)
@@ -241,7 +241,7 @@ LINK TO TESTING.md FILE
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 
-## Frameworks, Libraries & Programs Used
+### Frameworks, Libraries & Programs Used
 
 1. [Visual Studio Code](https://code.visualstudio.com/)
     - I used Visual Studio Code as editor for this project.
@@ -275,6 +275,9 @@ LINK TO TESTING.md FILE
 
 1. [Figma:](https://www.figma.com/)
     - I used Figma to create wireframes for this project.
+
+1. [Favicon Generator](https://favicon.io/favicon-generator/)
+    - I used Favicon generator to generate the favicon icon in the browser for free.
 
 1. [Apple Numbers:](https://apple.com/numbers/)
     - I used the Numbers app on my iPad pro to create testing spreadsheets.
