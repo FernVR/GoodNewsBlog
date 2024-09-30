@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Profile, Like
-from .forms import CommentForm, UserPostForm
+from .forms import CommentForm, UserPostForm, ProfileUpdateForm
 import bleach
 
 # Create your views here.
@@ -176,21 +176,17 @@ def custom_404_view(request, exception):
 @login_required
 def profile_update_view(request):
     if request.method == 'POST':
-        user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
 
-        if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
+        if profile_form.is_valid():
             profile_form.save()
             messages.success(request, 'Your profile has been updated!')
-            return redirect('profile')
+            return redirect('user_profile')
 
     else:
-        user_form = UserUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.profile)
 
-    return render(request, 'profile_update.html', {
-        'user_form': user_form,
+    return render(request, 'blog/profile_update.html', {
         'profile_form': profile_form
     })
 
@@ -204,4 +200,4 @@ def profile_delete_view(request):
         messages.success(request, 'Your profile has been deleted.')
         return redirect('home')  # Redirect to home after deletion
 
-    return render(request, 'profile_delete.html')
+    return render(request, 'blog/profile_delete.html')
