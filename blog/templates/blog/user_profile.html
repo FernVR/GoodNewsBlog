@@ -3,10 +3,10 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-
+<!-- Profile Image Banner -->
 <section id="profile-page-banner" class="landing-banner container-fluid"></section>
 
-
+<!-- User profile information -->
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-4">
@@ -46,31 +46,34 @@
         </div>
     </div>
 </div>
-<div id="user-post-list">
-    <h4>Your Blog Posts</h4>
-    <ul>
-        {% for post in user_posts %}
-        <li>
-            {% if post.slug %}
-            {{ post.title }}
-            <span>Published on: {{ post.created_on }}</span>
-            <!-- Delete Button Form -->
-            <form action="{% url 'post_delete' post.slug %}" method="POST" style="display:inline;">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger btn-sm"
-                    onclick="return confirm('Are you sure you want to delete this post?');">
-                    Delete
-                </button>
-            </form>
-            {% else %}
-            {{ post.title }} (No slug available)
-            {% endif %}
-        </li>
-        {% empty %}
-        <li>No posts found.</li>
-        {% endfor %}
-    </ul>
-</div>
+
+<!-- User post list so logged in users can see their pending/approved posts and can delete if they want -->
+<div id="user-post-list" class="profile-post-list row">
+    <div class="post-list col-12 text-center text-white">
+        <h4>Your Blog Posts</h4>
+        <ul>
+            {% for post in user_posts %}
+            <li>
+                {% if post.slug %}
+                {{ post.title }}
+                <span>Published on: {{ post.created_on }}</span>
+                <!-- Delete Button Form -->
+                <form action="{% url 'post_delete' post.slug %}" method="POST" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm"
+                        onclick="return confirm('Are you sure you want to delete this post?');">
+                        Delete
+                    </button>
+                </form>
+                {% else %}
+                {{ post.title }} (No slug available)
+                {% endif %}
+            </li>
+            {% empty %}
+            <li>No posts found.</li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 
@@ -80,7 +83,7 @@
         {% if user.is_authenticated %}
         <div>
             This is where the logged in user can create their own post.
-            <form id="userPostForm" method="post">
+            <form id="userPostForm" method="post" class="user-post-form">
                 {% csrf_token %}
                 {{ user_post_form|crispy }}
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>

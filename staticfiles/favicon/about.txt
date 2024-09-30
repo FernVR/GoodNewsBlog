@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: BIZ UDMincho
+- Font Author: Copyright 2022 The BIZ UDMincho Project Authors (https://github.com/googlefonts/morisawa-biz-ud-mincho)
+- Font Source: https://fonts.gstatic.com/s/bizudmincho/v11/EJRRQgI6eOxFjBdKs38yhtW1dwT7rcpY8Q.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

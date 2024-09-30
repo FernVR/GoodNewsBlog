@@ -36,19 +36,6 @@
         </div>
     </div>
 
-    <!-- Likes -->
-
-    <form action="{% url 'like_post' post.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Like</button>
-    </form>
-
-    <form action="{% url 'dislike_post' post.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Dislike</button>
-    </form>
-
-
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">
@@ -60,6 +47,7 @@
             <hr>
         </div>
     </div>
+
     <!-- Displaying Comments -->
     <div class="d-flex comment-section justify-content-start">
         <div class="card comment-box col-8 ">
@@ -115,8 +103,8 @@
         </div>
 
         <!-- Creating New Comments -->
-        <div class=" card comment-box ms-4">
-            <div class="card-body">
+        <div class="add-comment ms-4">
+            <div class="card-body text-white">
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <!-- Posting as section with user's profile image -->
