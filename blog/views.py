@@ -142,6 +142,8 @@ def user_profile(request):
     """
     # Get the logged-in user's profile
     profile = get_object_or_404(Profile, user=request.user)
+    # Get the posts created by the logged-in user
+    user_posts = Post.objects.filter(author=request.user)
 
     if request.method == "POST":
         user_post_form = UserPostForm(data=request.POST)
@@ -164,6 +166,7 @@ def user_profile(request):
         {
             'profile': profile,
             'user_post_form': user_post_form,  # Pass the form to the template
+            'user_posts': user_posts,  # Pass the user's posts to the template
         },
     )
 
@@ -201,3 +204,13 @@ def profile_delete_view(request):
         return redirect('home')  # Redirect to home after deletion
 
     return render(request, 'blog/profile_delete.html')
+
+
+
+@login_required
+def post_delete(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    if request.method == "POST":
+        post.delete()
+        messages.success(request, "Your post has been deleted.")
+        return redirect('user_profile')  # Redirect to the user's profile after deletion
