@@ -14,11 +14,12 @@
                 <!-- Content goes directly underneath this -->
                 {{ about.content | safe }}
             </div>
-            <div class="col-4 text-center">
+            <div class="col-md-4 text-center">
                 {% if "placeholder" in about.profile_image.url %}
-                <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" width="75%" alt="placeholder image">
+                <img src="{% static 'images/bg-landing-draft-small-screen.png' %}" class="img-fluid"
+                    alt="placeholder image">
                 {% else %}
-                <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
+                <img src="{{ about.profile_image.url }}" class="img-fluid" alt="{{ about.title }}">
                 {% endif %}
             </div>
         </div>
@@ -36,9 +37,9 @@
 
 <section class="landing-banner container-fluid"></section>
 
-<section id="contact">
+<section id="contact" class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
+        <div class="col-12 col-md-6">
             <h2>Please Leave Any Feedback you might have!
                 We always want to hear from you.
             </h2>
@@ -46,7 +47,9 @@
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
-                <button class="btn btn-secondary" type="submit">Submit</button>
+                <div class="text-center mt-3">
+                    <button class="btn btn-secondary" type="submit">Submit</button>
+                </div>
             </form>
         </div>
     </div>
