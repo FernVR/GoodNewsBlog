@@ -7,7 +7,7 @@
 <section id="profile-page-banner" class="landing-banner container-fluid"></section>
 
 <!-- User profile information -->
-<div class="container mt-5">
+<section class="container mt-5">
     <div class="row">
         <div class="col-md-4">
             <!-- Profile Picture -->
@@ -45,18 +45,22 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- User post list so logged in users can see their pending/approved posts and can delete if they want -->
-<div id="user-post-list" class="profile-post-list row">
-    <div class="post-list col-12 text-center text-white">
-        <h4>Your Blog Posts</h4>
-        <ul>
+<!-- User post list -->
+<section id="user-post-list" class="container mt-5">
+    <!-- CHANGED: Added container and mt-5 classes -->
+    <h4 class="text-center text-white">Your Blog Posts</h4>
+    <div class="post-list text-white">
+        <ul class="list-unstyled">
+            <!-- CHANGED: Added Bootstrap list styling -->
             {% for post in user_posts %}
-            <li>
+            <li class="my-2">
+                <!-- CHANGED: Added margin for spacing -->
                 {% if post.slug %}
                 {{ post.title }}
-                <span>Published on: {{ post.created_on }}</span>
+                <span class="text-muted"> : {{ post.created_on }}</span>
+                <!-- CHANGED: Added muted text class -->
                 <!-- Delete Button Form -->
                 <form action="{% url 'post_delete' post.slug %}" method="POST" style="display:inline;">
                     {% csrf_token %}
@@ -74,19 +78,19 @@
             {% endfor %}
         </ul>
     </div>
-</div>
+</section>
 
 
 <!-- Creating User Posts -->
-<div class="row">
-    <div class="col-12 d-flex add-post-content">
+<section class="row justify-content-center mt-5 d-none d-md-flex">
+    <div class="col-12 col-md-6 add-post-content">
         {% if user.is_authenticated %}
         <div>
-            This is where the logged in user can create their own post.
+            <h5>Create Your Own Post</h5>
             <form id="userPostForm" method="post" enctype="multipart/form-data" class="user-post-form">
                 {% csrf_token %}
                 {{ user_post_form|crispy }}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg btn-block">Submit</button>
             </form>
         </div>
         {% else %}
@@ -98,8 +102,16 @@
             {% endif %}
         </p>
     </div>
-</div>
+</section>
 
+<!-- Mobile user message -->
+<section class="row justify-content-center mt-5 d-md-none">
+    <!-- CHANGED: Added d-md-none to show on mobile only -->
+    <div class="col-12 text-center">
+        <h5>Want to create your own post?</h5>
+        <p>You can easily add your own posts using a computer or tablet!</p>
+    </div>
+</section>
 
 {% block extras %}
 <script src="{% static 'js/summernote-init.js' %}"></script> <!-- Link to your new JS file -->
