@@ -23,7 +23,7 @@ class CommentForm(forms.ModelForm):
 class UserPostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'excerpt', 'content',)
+        fields = ('title', 'excerpt', 'content', 'featured_image')
         widgets = {
             'content': SummernoteWidget(),  # Use Summernote widget for your content field
         }

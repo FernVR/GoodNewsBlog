@@ -146,7 +146,7 @@ def user_profile(request):
     user_posts = Post.objects.filter(author=request.user)
 
     if request.method == "POST":
-        user_post_form = UserPostForm(data=request.POST)
+        user_post_form = UserPostForm(data=request.POST, files=request.FILES)
         if user_post_form.is_valid():
             post = user_post_form.save(commit=False)
             post.author = request.user  # Set the author to the logged-in user

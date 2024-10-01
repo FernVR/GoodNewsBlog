@@ -83,7 +83,7 @@
         {% if user.is_authenticated %}
         <div>
             This is where the logged in user can create their own post.
-            <form id="userPostForm" method="post" class="user-post-form">
+            <form id="userPostForm" method="post" enctype="multipart/form-data" class="user-post-form">
                 {% csrf_token %}
                 {{ user_post_form|crispy }}
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
