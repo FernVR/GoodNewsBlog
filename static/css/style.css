@@ -38,6 +38,10 @@ body {
     border-radius: 2rem;
 }
 
+.pink-bg {
+    background-color: #fd96cd;
+}
+
 /* ----------------------------------------------------------------------------------------- Button / Links */
 
 .btn-signup,
@@ -268,7 +272,7 @@ body {
 /* ---------------------------------------------------------------------------------------------- About content */
 
 .about-content {
-    color: #FF44A7;
+    color: #e5ffbe;
 }
 
 #about-img-banner {
@@ -287,6 +291,7 @@ body {
 .profile-landing-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/friends-bg-landing-1.png);
     padding: 150px;
+    background-position: center;
 }
 
 .profile-box {
@@ -311,6 +316,9 @@ body {
 
 .profile-post-list {
     text-align: center;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    padding: 10px;
 }
 
 .add-post-content {
