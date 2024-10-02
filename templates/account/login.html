@@ -7,27 +7,23 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign In" %}</h3>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-4" style="width: 100%; max-width: 600px;">
+      <h3 class="text-center mb-4">{% trans "Sign In" %}</h3>
 
-      <p>{% blocktrans %}Welcome back to the GoodNews blog. To leave a comment or like a post, please log in. If
-        you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+      <p class="text-center">
+          {% blocktrans %}Welcome back to the GoodNews blog. To leave a comment or like a post, please log in.
+          If you have not created an account yet, then <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+      </p>
+
       <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="btn btn-primary w-100 mt-3" type="submit">{% trans "Sign In" %}</button>
       </form>
-    </div>
   </div>
 </div>
 {% endblock %}
