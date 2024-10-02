@@ -2,14 +2,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2>Are you sure you want to delete your profile?</h2>
-    <p>This action is irreversible and will delete all your data.</p>
-    
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Yes, Delete My Profile</button>
-        <a href="{% url 'user_profile' %}" class="btn btn-secondary">Cancel</a>
-    </form>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4 text-center" style="width: 100%; max-width: 600px;">
+        <h2 class="text-danger mb-4">Are you sure you want to delete your profile?</h2>
+        <p class="mb-4">This action is irreversible and will delete all your data.</p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger w-100 mb-2">Yes, Delete My Profile</button>
+            <a href="{% url 'user_profile' %}" class="btn btn-secondary w-100">Cancel</a>
+        </form>
+    </div>
 </div>
 {% endblock %}
