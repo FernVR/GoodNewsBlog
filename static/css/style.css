@@ -5,6 +5,7 @@
 
 body {
     background-color: #F9FAFC;
+    font-family: Inika, sans-serif;
 }
 
 .card-info {
@@ -283,8 +284,21 @@ body {
 
 /* ------------------------------------------------------------------------------------------------------- User Profile Page */
 
+.profile-landing-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/friends-bg-landing-1.png);
+    padding: 150px;
+}
+
 .profile-box {
     display: flex;
+}
+
+.bio-box {
+    background-color: #98FC03;
+    border: 1px solid #000;
+    border-radius: 2rem;
+    padding: 10px 5px;
+    
 }
 
 .profile-post-list {
