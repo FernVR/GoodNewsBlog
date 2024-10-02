@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 
-
-<h1>Oops! Page not found</h1>
+<div class="error-page text-white">
+    <h1>Oops! Page not found</h1>
     <p>We couldn't find the page you're looking for. Please check the URL or go back to the homepage.</p>
     <a href="{% url 'home' %}">Go to Home</a>
-
+</div>
 {% endblock %}

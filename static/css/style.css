@@ -99,6 +99,14 @@ body {
     color: #000;
 }
 
+.reg-links {
+    color: #000;
+}
+
+.reg-links:hover {
+    color: #FF44A7;
+}
+
 .footer-color {
     background-color: #98FC03;
 }

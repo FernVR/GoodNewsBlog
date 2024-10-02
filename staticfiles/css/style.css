@@ -99,6 +99,14 @@ body {
     color: #000;
 }
 
+.reg-links {
+    color: #000;
+}
+
+.reg-links:hover {
+    color: #FF44A7;
+}
+
 .footer-color {
     background-color: #98FC03;
 }
@@ -386,9 +394,9 @@ button[type="submit"] {
 /* Styles for screens larger than 1450px */
 @media screen and (min-width: 1450px) {
     .add-post-content {
-        background-color: #FF44A7;
+        background-color: #ae1567;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 2rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
