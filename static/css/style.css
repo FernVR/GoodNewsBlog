@@ -271,14 +271,17 @@ body {
 
 /* ---------------------------------------------------------------------------------------------- About content */
 
+.about-landing-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/about-bg-1.png);
+    padding: 150px;
+    background-position: center;
+}
+
 .about-content {
     color: #e5ffbe;
 }
 
-#about-img-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
-    
-}
+
 
 /* Temporarily pushing contact form lower down */
 
