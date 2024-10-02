@@ -4,14 +4,17 @@
 {% load crispy_forms_tags %}
 
 <!-- Profile Image Banner -->
-<section id="profile-page-banner" class="landing-banner container-fluid"></section>
+<section id="profile-page-banner" class="landing-banner container-fluid p-6 m-0">
+    <p class="p-0 m-0"> welcome to your very own profile page! </p>
+</section>
+
 
 <!-- User profile information -->
-<section class="container mt-5">
-    <div class="row">
+<section class="container mt-5 ">
+    <div class="row ">
         <!-- Profile Picture -->
         <div class="col-md-4">
-            <div class="card text-center">
+            <div class="card text-center mb-3">
                 <img src="{% if request.user.profile.profile_img %}{{ request.user.profile.profile_img.url }}{% else %}{% static 'feat-img-example.png' %}{% endif %}"
                     class="card-img-top rounded-circle mt-3 mx-auto" alt="Profile Picture"
                     style="width: 150px; height: 150px; object-fit: cover;">
@@ -24,11 +27,11 @@
         <!-- User Information -->
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header ">
                     <h4>User Information</h4>
                 </div>
                 <div class="card-body">
-                    <ul>
+                    <ul class="list-unstyled">
                         <li>
                             username: {{ user.username }}
                         </li>
@@ -96,9 +99,9 @@
 
 <!-- Mobile user message -->
 <section class="row justify-content-center mt-5 d-custom-none">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center text-white">
         <h5>Want to create your own post?</h5>
-        <p>You can easily add your own posts using a computer or tablet!</p>
+        <p>You can easily add your own posts using a computer!</p>
     </div>
 </section>
 
