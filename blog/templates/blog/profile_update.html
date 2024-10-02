@@ -2,16 +2,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2>Update Your Profile</h2>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="row">
-            <div class="col-md-6">
-                {{ profile_form.as_p }}
-            </div>
-        </div>
-        <button type="submit" class="btn btn-success">Update Profile</button>
-    </form>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="update-card shadow-lg p-4" style="width: 100%; max-width: 600px;">
+        <h2 class="text-center mb-4">Update Your Profile</h2>
+        <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+            {% csrf_token %}
+            {{ profile_form.as_p }}
+            <button type="submit" class="btn btn-success update-submit-btn w-100">Update Profile</button>
+        </form>
+    </div>
 </div>
 {% endblock %}

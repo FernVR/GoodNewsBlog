@@ -53,7 +53,7 @@ body {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #FF44A7;
 }
 
 .link {
@@ -328,9 +328,38 @@ body {
     color: #fff;
     text-align: center;
     justify-content: space-evenly;
-    margin: 200px 0 50px 0;
+    margin-bottom: 30px;
 }
 
+/* ------------------------------------------------------------------------------------------------------ Update Profile */
+
+/* Form box styles */
+.update-card {
+    background-color: #FF44A7;
+    color: #000;
+    border-radius: 2rem; 
+    margin: 30px;
+}
+
+/* Form spacing */
+form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Align and space the submit button */
+button[type="submit"] {
+    margin-top: 1rem;
+    background-color: #000;
+    border: 1px solid black;
+}
+
+.update-submit-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+/*-------------------------------------------------------------------------------------------------------- Profile Delete */
 
 
 /* ------------------------------------------------------------------------------------------------------- Media Queries */
