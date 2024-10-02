@@ -122,7 +122,7 @@ body {
 /*------------------------------------------------------------------------------------------- Home Page */
 
 .landing-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-image-main.png);
     padding: 150px;
 }
 
@@ -162,6 +162,12 @@ body {
     background-color: #FF44A7;
     border: 0;
     margin-top: 30px;
+    color: #000;
+}
+
+.next-btn:hover {
+    background-color: #F9FAFC;
+    color: #FF44A7;
 }
 
 .post-title {
@@ -269,6 +275,10 @@ body {
 .btn-delete {
     color: #fff;
     background: #000;
+}
+
+.btn-delete:hover {
+    color: #FF44A7;
 }
 
 .add-comment {

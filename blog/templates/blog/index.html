@@ -8,7 +8,8 @@
 <!-- Landing Banner Img -->
 <section class="landing-banner container-fluid">
     <!-- Landing Img here with a quote -->
-    <p> this is the quote on the landing banner </p>
+    <p> “I'm convinced of this: Good done anywhere is good done everywhere. For a change, start by speaking to people rather than walking by them like they're stones that don't matter. As long as you're breathing, it's never too late to do some good.”
+        — Dr. Maya Angelou </p>
 </section>
 
 <div class="container article-list">
@@ -67,7 +68,7 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link next-btn">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
@@ -83,15 +84,6 @@
         Aremeyaw Anas</p>
 </div>
 
-{% if user.is_authenticated %}
-<div id="user-posts">
-    <!-- This is where authenticated users can add posts of their own -->
-    <!-- Section will only be accessible to authenticated users, if user is unregistered it will ask if they want to register/ login -->
-    <p>
-        Test
-    </p>
-</div>
-{% endif %}
 
 <!-- index.html content ends here -->
 {% endblock %}
