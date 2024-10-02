@@ -5,6 +5,7 @@
 
 body {
     background-color: #F9FAFC;
+    font-family: Inika, sans-serif;
 }
 
 .card-info {
@@ -37,6 +38,10 @@ body {
     border-radius: 2rem;
 }
 
+.pink-bg {
+    background-color: #fd96cd;
+}
+
 /* ----------------------------------------------------------------------------------------- Button / Links */
 
 .btn-signup,
@@ -48,7 +53,7 @@ body {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #FF44A7;
 }
 
 .link {
@@ -266,14 +271,17 @@ body {
 
 /* ---------------------------------------------------------------------------------------------- About content */
 
-.about-content {
-    color: #FF44A7;
+.about-landing-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/about-bg-1.png);
+    padding: 150px;
+    background-position: center;
 }
 
-#about-img-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
-    
+.about-content {
+    color: #e5ffbe;
 }
+
+
 
 /* Temporarily pushing contact form lower down */
 
@@ -283,21 +291,79 @@ body {
 
 /* ------------------------------------------------------------------------------------------------------- User Profile Page */
 
+.profile-landing-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/friends-bg-landing-1.png);
+    padding: 150px;
+    background-position: center;
+}
+
 .profile-box {
     display: flex;
 }
 
+.user-card {
+    background-color: #000;
+}
+
+.user-info-card {
+    background-color: #fd96cd;
+}
+
+.bio-box {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 2rem;
+    padding: 10px 5px;
+    
+}
+
 .profile-post-list {
     text-align: center;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    padding: 10px;
 }
 
 .add-post-content {
     color: #fff;
     text-align: center;
     justify-content: space-evenly;
-    margin: 200px 0 50px 0;
+    margin-bottom: 30px;
 }
 
+/* ------------------------------------------------------------------------------------------------------ Update Profile */
+
+/* Form box styles */
+.update-card {
+    background-color: #FF44A7;
+    color: #000;
+    border-radius: 2rem; 
+    margin: 30px;
+}
+
+/* Form spacing */
+form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Align and space the submit button */
+button[type="submit"] {
+    margin-top: 1rem;
+    background-color: #000;
+    border: 1px solid black;
+}
+
+.update-submit-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+.btn-signup {
+    color: #fff;
+}
+
+/*-------------------------------------------------------------------------------------------------------- Profile Delete */
 
 
 /* ------------------------------------------------------------------------------------------------------- Media Queries */
@@ -316,3 +382,40 @@ body {
     }
 
 }
+
+/* Styles for screens larger than 1450px */
+@media screen and (min-width: 1450px) {
+    .add-post-content {
+        background-color: #FF44A7;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-post-form {
+        margin-top: 20px;
+    }
+}
+
+/* Show 'Add User Post' section only on screens wider than 1450px */
+@media screen and (min-width: 1450px) {
+    .d-custom-flex {
+        display: flex !important;
+    }
+
+    .d-custom-none {
+        display: none !important;
+    }
+}
+
+/* Show mobile message on screens smaller than 1450px */
+@media screen and (max-width: 1449px) {
+    .d-custom-flex {
+        display: none !important;
+    }
+
+    .d-custom-none {
+        display: block !important;
+    }
+}
+
