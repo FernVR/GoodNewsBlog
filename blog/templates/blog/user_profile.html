@@ -9,8 +9,8 @@
 <!-- User profile information -->
 <section class="container mt-5">
     <div class="row">
+        <!-- Profile Picture -->
         <div class="col-md-4">
-            <!-- Profile Picture -->
             <div class="card text-center">
                 <img src="{% if request.user.profile.profile_img %}{{ request.user.profile.profile_img.url }}{% else %}{% static 'feat-img-example.png' %}{% endif %}"
                     class="card-img-top rounded-circle mt-3 mx-auto" alt="Profile Picture"
@@ -21,23 +21,23 @@
                 </div>
             </div>
         </div>
+        <!-- User Information -->
         <div class="col-md-8">
-            <!-- User Information -->
             <div class="card">
                 <div class="card-header">
                     <h4>User Information</h4>
                 </div>
                 <div class="card-body">
-                    <ul></ul>
-                    <li>
-                        username: {{ user.username }}
-                    </li>
-                    <li>
-                        location: {{ user.profile.location }}
-                    </li>
-                    <li>
-                        bio: {{ user.profile.bio }}
-                    </li>
+                    <ul>
+                        <li>
+                            username: {{ user.username }}
+                        </li>
+                        <li>
+                            location: {{ user.profile.location }}
+                        </li>
+                        <li>
+                            bio: {{ user.profile.bio }}
+                        </li>
                     </ul>
                     <a href="{% url 'profile-update' %}" class="btn btn-primary">Update Profile</a>
                     <a href="{% url 'profile-delete' %}" class="btn btn-danger">Delete Profile</a>
@@ -49,18 +49,14 @@
 
 <!-- User post list -->
 <section id="user-post-list" class="container mt-5">
-    <!-- CHANGED: Added container and mt-5 classes -->
     <h4 class="text-center text-white">Your Blog Posts</h4>
     <div class="post-list text-white">
         <ul class="list-unstyled">
-            <!-- CHANGED: Added Bootstrap list styling -->
             {% for post in user_posts %}
             <li class="my-2">
-                <!-- CHANGED: Added margin for spacing -->
                 {% if post.slug %}
                 {{ post.title }}
                 <span class="text-muted"> : {{ post.created_on }}</span>
-                <!-- CHANGED: Added muted text class -->
                 <!-- Delete Button Form -->
                 <form action="{% url 'post_delete' post.slug %}" method="POST" style="display:inline;">
                     {% csrf_token %}
@@ -82,31 +78,24 @@
 
 
 <!-- Creating User Posts -->
-<section class="row justify-content-center mt-5 d-none d-md-flex">
+<section class="row justify-content-center mt-5 d-none d-custom-flex">
     <div class="col-12 col-md-6 add-post-content">
         {% if user.is_authenticated %}
         <div>
             <h5>Create Your Own Post</h5>
+            <p>Instructions for leaving a post</p>
             <form id="userPostForm" method="post" enctype="multipart/form-data" class="user-post-form">
                 {% csrf_token %}
                 {{ user_post_form|crispy }}
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg btn-block">Submit</button>
             </form>
         </div>
-        {% else %}
-        <p class="add-post-link-box">
-            Thanks for reading! <br>
-            <a href="{% url 'account_signup' %}">
-                Sign Up to share your own story
-            </a>
-            {% endif %}
-        </p>
+        {% endif %}
     </div>
 </section>
 
 <!-- Mobile user message -->
-<section class="row justify-content-center mt-5 d-md-none">
-    <!-- CHANGED: Added d-md-none to show on mobile only -->
+<section class="row justify-content-center mt-5 d-custom-none">
     <div class="col-12 text-center">
         <h5>Want to create your own post?</h5>
         <p>You can easily add your own posts using a computer or tablet!</p>

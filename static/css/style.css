@@ -316,3 +316,40 @@ body {
     }
 
 }
+
+/* Styles for screens larger than 1450px */
+@media screen and (min-width: 1450px) {
+    .add-post-content {
+        background-color: #FF44A7;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-post-form {
+        margin-top: 20px;
+    }
+}
+
+/* Show 'Add User Post' section only on screens wider than 1450px */
+@media screen and (min-width: 1450px) {
+    .d-custom-flex {
+        display: flex !important;
+    }
+
+    .d-custom-none {
+        display: none !important;
+    }
+}
+
+/* Show mobile message on screens smaller than 1450px */
+@media screen and (max-width: 1449px) {
+    .d-custom-flex {
+        display: none !important;
+    }
+
+    .d-custom-none {
+        display: block !important;
+    }
+}
+
