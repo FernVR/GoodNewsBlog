@@ -359,6 +359,10 @@ button[type="submit"] {
     border: 1px solid black;
 }
 
+.btn-signup {
+    color: #fff;
+}
+
 /*-------------------------------------------------------------------------------------------------------- Profile Delete */
 
 
