@@ -293,8 +293,16 @@ body {
     display: flex;
 }
 
+.user-card {
+    background-color: #000;
+}
+
+.user-info-card {
+    background-color: #fd96cd;
+}
+
 .bio-box {
-    background-color: #98FC03;
+    background-color: #fff;
     border: 1px solid #000;
     border-radius: 2rem;
     padding: 10px 5px;
