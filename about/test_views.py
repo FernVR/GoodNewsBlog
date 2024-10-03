@@ -27,4 +27,21 @@ class TestAboutViews(TestCase):
         self.assertContains(response, "About Content")
         self.assertIsInstance(response.context['collaborate_form'], CollaborateForm)
 
+    def test_about_me_view_post_valid_form(self):
+        response = self.client.post(reverse('about'), {
+            'name': 'Test User',
+            'email': 'testuser@example.com',
+            'message': 'This is a collaboration request.'
+        })
+
+        # Check for a redirect response
+        self.assertRedirects(response, reverse('about'))
+
+        # Verify the success message was created
+        messages_list = list(messages.get_messages(response.wsgi_request))
+        self.assertTrue(len(messages_list) > 0)
+        self.assertEqual(str(messages_list[0]), 
+                        "Collaboration request received! I endeavour to respond within 2 working days.")
+
+
     
