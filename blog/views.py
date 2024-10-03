@@ -105,37 +105,6 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-@login_required
-def like_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    like, created = Like.objects.get_or_create(user=request.user, post=post)
-
-    # Toggle like/dislike
-    if created:  # If a new like is created
-        like.like_type = True  # This means the user liked the post
-        like.save()
-    else:  # If the user already liked/disliked the post
-        like.delete()  # Remove the like/dislike
-        return redirect('post_detail', post_id=post.id)
-
-    return redirect('post_detail', post_id=post.id)
-
-@login_required
-def dislike_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    like, created = Like.objects.get_or_create(user=request.user, post=post)
-
-    # Toggle dislike
-    if created:  # If a new dislike is created
-        like.like_type = False  # This means the user disliked the post
-        like.save()
-    else:  # If the user already liked/disliked the post
-        like.delete()  # Remove the like/dislike
-        return redirect('post_detail', post_id=post.id)
-
-    return redirect('post_detail', post_id=post.id)
-
-
 def user_profile(request):
     """
     View for displaying the user profile and handling new post submissions.
