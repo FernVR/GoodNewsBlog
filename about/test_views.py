@@ -41,7 +41,7 @@ class TestAboutViews(TestCase):
         messages_list = list(messages.get_messages(response.wsgi_request))
         self.assertTrue(len(messages_list) > 0)
         self.assertEqual(str(messages_list[0]), 
-                        "Collaboration request received! I endeavour to respond within 2 working days.")
+                        "Your feedback has been sent. Thank you!")
 
 
     

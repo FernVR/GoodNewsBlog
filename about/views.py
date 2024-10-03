@@ -25,7 +25,7 @@ def about_me(request):
             collaborate_form.save()
             messages.add_message(
                 request, messages.SUCCESS, 
-                "Collaboration request received! I endeavour to respond within 2 working days."
+                "Your feedback has been sent. Thank you!"
             )
             return redirect(reverse('about'))  # Redirect after successful submission
         else:
