@@ -34,6 +34,7 @@ class TestUserPostForm(TestCase):
         form = UserPostForm(form_data)
         self.assertFalse(form.is_valid(), msg="Form should be invalid with missing title")
 
+
 class TestProfileUpdateForm(TestCase):
 
     def test_form_is_valid(self):
