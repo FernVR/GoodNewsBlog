@@ -122,7 +122,7 @@ body {
 /*------------------------------------------------------------------------------------------- Home Page */
 
 .landing-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-image-main.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
     padding: 150px;
 }
 
@@ -161,14 +161,10 @@ body {
     font-weight: 600;
     background-color: #FF44A7;
     border: 0;
-    margin-top: 30px;
-    color: #000;
+    margin: 30px;
 }
 
-.next-btn:hover {
-    background-color: #F9FAFC;
-    color: #FF44A7;
-}
+
 
 .post-title {
     margin-top: 10%;
@@ -275,10 +271,6 @@ body {
 .btn-delete {
     color: #fff;
     background: #000;
-}
-
-.btn-delete:hover {
-    color: #FF44A7;
 }
 
 .add-comment {
@@ -404,9 +396,9 @@ button[type="submit"] {
 /* Styles for screens larger than 1450px */
 @media screen and (min-width: 1450px) {
     .add-post-content {
-        background-color: #ae1567;
+        background-color: #FF44A7;
         padding: 20px;
-        border-radius: 2rem;
+        border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
