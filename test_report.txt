@@ -1,0 +1,60 @@
+Found 18 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: allauth, cloudinary, cloudinary_storage, crispy_bootstrap5, crispy_forms, messages, staticfiles
+  Apply all migrations: about, account, admin, auth, blog, contenttypes, django_summernote, sessions, sites, socialaccount
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying about.0001_initial... OK
+  Applying about.0002_collaboraterequest... OK
+  Applying about.0003_about_profile_image... OK
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying account.0001_initial... OK
+  Applying account.0002_email_max_length... OK
+  Applying account.0003_alter_emailaddress_create_unique_verified_email... OK
+  Applying account.0004_alter_emailaddress_drop_unique_email... OK
+  Applying account.0005_emailaddress_idx_upper_email... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying blog.0001_initial... OK
+  Applying blog.0002_post_excerpt... OK
+  Applying blog.0003_rename_approved_post_status_post_updated_on... OK
+  Applying blog.0004_comment... OK
+  Applying blog.0005_alter_comment_options_alter_post_options... OK
+  Applying blog.0006_alter_comment_approved... OK
+  Applying blog.0007_post_featured_image... OK
+  Applying blog.0008_alter_post_content... OK
+  Applying blog.0009_alter_post_content... OK
+  Applying blog.0010_profile... OK
+  Applying blog.0011_alter_post_excerpt... OK
+  Applying blog.0012_rename_avatar_profile_profile_img... OK
+  Applying blog.0013_profile_location_alter_profile_bio... OK
+  Applying blog.0014_like... OK
+  Applying blog.0015_alter_post_featured_image... OK
+  Applying django_summernote.0001_initial... OK
+  Applying django_summernote.0002_update-help_text... OK
+  Applying django_summernote.0003_alter_attachment_id... OK
+  Applying sessions.0001_initial... OK
+  Applying sites.0001_initial... OK
+  Applying sites.0002_alter_domain_unique... OK
+  Applying socialaccount.0001_initial... OK
+  Applying socialaccount.0002_token_max_lengths... OK
+  Applying socialaccount.0003_extra_data_default_dict... OK
+  Applying socialaccount.0004_app_provider_id_settings... OK
+  Applying socialaccount.0005_socialtoken_nullable_app... OK
+System check identified no issues (0 silenced).
