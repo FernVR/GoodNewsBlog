@@ -43,9 +43,9 @@ screenshot of validator results
 screenshot of validator results
 
 ## Python Unit Testing
-screenshot of python unit test results - report.
+Results for testing report can be found in [test_report.txt](test_report.txt) which I generated using the 'python manage.py test -v 2 > test_report.txt' command in the terminal.
 
-## Automated Testing
+### Automated Testing
 screenshot of test results for automated testing. Testing functions can be found in these files:
 [Blog/Test Forms](blog/test_forms.py)
 [Blog/ Test Views](blog/test_views.py)
@@ -55,6 +55,11 @@ screenshot of test results for automated testing. Testing functions can be found
 ## Manual Testing
 Create a different grid for each title, rows are individual items to test, cols are : 'test case' , 'action', 'acceptance criteria', 'result'
 ### Home Page
+#### Links and Buttons 
+#### Display and Images 
+#### Responsive Design Grid 
+
+### Post Detail Page
 #### Links and Buttons 
 #### Display and Images 
 #### Responsive Design Grid 
