@@ -79,3 +79,34 @@ class TestBlogViews(TestCase):
         # Follow the redirect and check if the success message is present
         follow_response = self.client.get(reverse('user_profile'))
         self.assertContains(follow_response, 'Your post has been submitted and is awaiting approval.')
+
+    
+    def test_profile_update_view(self):
+        self.client.login(username="myUsername", password="myPassword")
+    
+        # Fetch the existing profile for the user
+        profile = Profile.objects.get(user=self.user)
+
+        # Set initial values for the profile
+        profile.bio = 'Initial Bio'  # Ensure there's an initial value
+        profile.location = 'Initial Location'
+        profile.save()  # Save the initial state
+
+        response = self.client.post(reverse('profile-update'), {
+            'bio': 'Updated Bio',
+            'location': 'Updated Location'
+        })
+
+        self.assertRedirects(response, reverse('user_profile'))
+    
+        # Refresh the profile instance to get updated values
+        profile.refresh_from_db()
+    
+        self.assertEqual(profile.bio, 'Updated Bio')
+        self.assertEqual(profile.location, 'Updated Location')  # Check the updated location too
+
+    def test_post_delete_view(self):
+        self.client.login(username="myUsername", password="myPassword")
+        response = self.client.post(reverse('post_delete', args=['blog-title']))
+        self.assertRedirects(response, reverse('user_profile'))
+        self.assertFalse(Post.objects.filter(slug='blog-title').exists())
