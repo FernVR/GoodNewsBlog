@@ -42,6 +42,10 @@ body {
     background-color: #fd96cd;
 }
 
+.text-pink {
+    color: #FF44A7;
+}
+
 /* ----------------------------------------------------------------------------------------- Button / Links */
 
 .btn-signup,
@@ -122,8 +126,9 @@ body {
 /*------------------------------------------------------------------------------------------- Home Page */
 
 .landing-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/goodnews-home.png);
     padding: 150px;
+    background-position: center;
 }
 
 .landing-banner>p {
@@ -382,10 +387,7 @@ button[type="submit"] {
 /* Mobile Styles */
 
 @media screen and (max-width: 450px) {
-    .landing-banner {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(../images/bg-landing-draft-small-screen.png);
-        padding: 100px;
-    }
+    
 
     .article-section-quote {
         padding: 5px;
