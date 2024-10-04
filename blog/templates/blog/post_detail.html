@@ -49,44 +49,39 @@
     </div>
 
     <!-- Displaying Comments -->
-    <div class="d-flex comment-section justify-content-start">
-        <div class="card comment-box col-8 ">
+<div class="comment-section row">
+    <!-- Comments Section -->
+    <div class="col-12 col-md-8 mb-3">
+        <div class="card comment-box">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                <!-- Loop through comments -->
                 {% for comment in comments %}
-                
                 {% if not comment.approved and comment.author == user %}
-                <p class="approval">
-                    your comment needs approval
-                </p>
+                <p class="approval">Your comment needs approval</p>
                 {% endif %}
 
                 <div class="p-2 comments
-                {% if not comment.approved and comment.author == user %}
-                faded
-                {% elif not comment.approved %} 
-                d-none
-                {% endif %}">
+                    {% if not comment.approved and comment.author == user %}
+                    faded
+                    {% elif not comment.approved %} 
+                    d-none
+                    {% endif %}">
 
-                    <!-- The commenter information -->
-                    <div class="commenter d-flex align-items-center justify-content-start">
+                    <!-- Commenter information -->
+                    <div class="commenter d-flex align-items-center justify-content-start mb-2">
                         <img src="{% if comment.author.profile.profile_img %}{{ comment.author.profile.profile_img.url }}
-                        {% else %}
-                        {% static 'images/feat-img-example.png' %}{% endif %}" class="rounded-circle me-2 "
-                            style="width: 50px; height: 50px; object-fit: cover;" alt="Profile Picture">
-
-                        <p class="font-weight-bold mb-0">
-                            {{ comment.author }} :
-                        </p>
+                        {% else %}{% static 'images/feat-img-example.png' %}{% endif %}"
+                        class="rounded-circle me-2" style="width: 50px; height: 50px; object-fit: cover;"
+                        alt="Profile Picture">
+                        
+                        <p class="font-weight-bold mb-0">{{ comment.author }} :</p>
                         <p id="comment{{ comment.id }}" class="mb-0 ms-2" style="line-height: 1.5;">
-                            <!-- Adjust line-height if needed -->
                             {{ comment.body }}
                         </p>
                     </div>
-                    <div >
-                        on: {{ comment.created_on }}
-                    </div>
+
+                    <div>on: {{ comment.created_on }}</div>
 
                     {% if user.is_authenticated and comment.author == user %}
                     <div class="d-flex comment-edit-btns">
@@ -95,42 +90,37 @@
                     </div>
                     {% endif %}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
+    </div>
 
-        <!-- Creating New Comments -->
-        <div class="add-comment ms-4">
+    <!-- Add New Comment Form -->
+    <div class="col-12 col-md-4">
+        <div class="card add-comment">
             <div class="card-body text-white">
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
-                <!-- Posting as section with user's profile image -->
+
                 <div class="d-flex align-items-center mb-2">
-                    <img src="{% if user.profile.profile_img %}
-                    {{ user.profile.profile_img.url }}
-                    {% else %}
-                    {% static 'images/feat-img-example.png' %}
-                    {% endif %}" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;"
-                        alt="Profile Picture">
+                    <img src="{% if user.profile.profile_img %}{{ user.profile.profile_img.url }}
+                    {% else %}{% static 'images/feat-img-example.png' %}{% endif %}"
+                    class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;" alt="Profile Picture">
                     <p class="mb-0">Posting as: {{ user.username }}</p>
                 </div>
-                <!-- Comment Form -->
-                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+
+                <form id="commentForm" method="post">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg mt-2">Submit</button>
                 </form>
                 {% else %}
-                <p><a href="{% url 'account_login' %}">
-                        Log in
-                    </a>
-                    to leave a comment
-                </p>
+                <p><a href="{% url 'account_login' %}">Log in</a> to leave a comment</p>
                 {% endif %}
             </div>
         </div>
     </div>
+</div>
 
     <!-- Delete confirmation modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

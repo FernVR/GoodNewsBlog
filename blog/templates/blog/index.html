@@ -14,7 +14,7 @@
 
 <!-- Landing Banner Img/ Mobile-specific content -->
 <section class="landing-banner container-fluid d-block d-sm-none p-6">
-    <h2 class="text-pink text-center">Welcome to Goodnews</h2>
+    <h2 class="text-pink">GoodNews</h2>
 </section>
 
 <div class="container article-list">
@@ -24,7 +24,7 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-6">
-                    <div class=" mb-4">
+                    <div class=" card mb-4">
                         <div class=" card-body ">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
