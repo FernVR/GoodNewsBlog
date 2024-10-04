@@ -43,7 +43,7 @@ body {
 }
 
 .text-pink {
-    color: #FF44A7;
+    color: #eb1d8b;
 }
 
 /* ----------------------------------------------------------------------------------------- Button / Links */
@@ -135,7 +135,10 @@ body {
     padding: 0;
     text-align: center;
     font-size: 150%;
-    color: antiquewhite;
+}
+
+.card-body {
+    border: none;
 }
 
 .article-list {
@@ -153,11 +156,24 @@ body {
     font-size: 130%;
 }
 
+.post-link {
+    color: #fff;
+}
+
+.post-link:hover {
+    color: #FF44A7;
+}
+
 .add-post-link-box {
     border: 1px solid white;
     border-radius: 2em;
     padding: 15px;
     line-height: 50px;
+}
+
+.card-img-top {
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .next-btn {
@@ -166,7 +182,14 @@ body {
     font-weight: 600;
     background-color: #FF44A7;
     border: 0;
-    margin: 30px;
+    margin: 10px;
+    color: #000;
+}
+
+.next-btn:hover {
+    background-color: #F9FAFC;
+    color: #FF44A7;
+
 }
 
 
@@ -224,11 +247,6 @@ body {
 .post-link {
     text-decoration: none;
     color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #203600;
 }
 
 /*--------------------------------------------------------------------------------------------- Comment styles */
