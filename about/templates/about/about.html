@@ -35,17 +35,24 @@
                 <p class="text-end"><em>Updated on: {{ about.updated_on }} </em></p>
             </div>
         </div>
+    </div>
 </section>
 
-<section class="profile-landing-banner container-fluid p-6 m-0"></section>
+<section class="profile-landing-banner container-fluid p-6 m-0">
+    <h5 class="text-white text-center">Please leave us any feedback you might have</h5>
+</section>
 
 <section id="contact" class="container my-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 text-white">
-            <h2>Please Leave Any Feedback you might have!
-                We always want to hear from you.
-            </h2>
-
+            <div class="feedback-info text-center">
+                <h2>
+                We always want to hear from you!
+                </h2>
+                <p>
+                    * Indicates required field
+                </p>
+            </div>
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}

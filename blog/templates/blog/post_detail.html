@@ -29,9 +29,9 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
+                <div class="card-text">
                     {{ post.content | safe }}
-                </p>
+                </div>
             </div>
         </div>
     </div>
@@ -85,8 +85,8 @@
 
                     {% if user.is_authenticated and comment.author == user %}
                     <div class="d-flex comment-edit-btns">
-                        <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                        <div class="btn btn-delete" comment_id="{{ comment.id }}">Delete</div>
+                        <div class="btn btn-edit" comment_id="{{ comment.id }}">Edit</div>
                     </div>
                     {% endif %}
                 </div>

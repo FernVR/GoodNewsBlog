@@ -88,16 +88,19 @@
     </div>
 </section>
 
-<section class="about-landing-banner container-fluid p-6 mt-5 d-none d-custom-flex"">
+<section class="about-landing-banner container-fluid p-6 mt-5 d-none d-custom-flex">
+    <h4 class="text-center text-white">
+        Add your own post here
+    </h4>
 </section>
 
 <!-- Creating User Posts -->
 <section class="row justify-content-center d-none d-custom-flex">
     <div class="col-12 col-md-6 add-post-content">
         {% if user.is_authenticated %}
-        <div>
+        <div class="post-form text-black">
             <h5>Create Your Own Post</h5>
-            <p>Instructions for leaving a post</p>
+            <p>* Indicates a required field</p>
             <form id="userPostForm" method="post" enctype="multipart/form-data" class="user-post-form">
                 {% csrf_token %}
                 {{ user_post_form|crispy }}
