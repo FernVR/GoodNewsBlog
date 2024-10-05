@@ -3,7 +3,9 @@ from .forms import CollaborateForm
 
 
 class TestCollaborateForm(TestCase):
-
+    """
+    Test Feedback/Collaboration form.
+    """
     def test_form_is_valid(self):
         form_data = {
             'name': 'John Doe',

@@ -12,6 +12,9 @@ import bleach
 # Create your views here.
 
 class PostList(generic.ListView):
+    """
+    View to display paginated list of posts on home page.
+    """
     queryset = Post.objects.filter(
         status=1).annotate(
             comment_count=Count(
@@ -145,11 +148,17 @@ def user_profile(request):
 
 
 def custom_404_view(request, exception):
+    """
+    View to render 404 page.
+    """
     return render(request, '404.html', status=404)
 
 
 @login_required
 def profile_update_view(request):
+    """
+    View to update profile information. 
+    """
     if request.method == 'POST':
         profile_form = ProfileUpdateForm(
             request.POST, request.FILES, instance=request.user.profile)
@@ -169,6 +178,9 @@ def profile_update_view(request):
 
 @login_required
 def profile_delete_view(request):
+    """
+    View to delete profile. 
+    """
     if request.method == 'POST':
         user = request.user
         user.delete()
@@ -180,6 +192,9 @@ def profile_delete_view(request):
 
 @login_required
 def post_delete(request, slug):
+    """
+    View to delete user posts from post list. 
+    """
     post = get_object_or_404(Post, slug=slug, author=request.user)
     if request.method == "POST":
         post.delete()

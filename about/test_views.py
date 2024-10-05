@@ -7,7 +7,9 @@ from .forms import CollaborateForm
 
 
 class TestAboutViews(TestCase):
-
+    """
+    Test about views 
+    """
     def setUp(self):
         self.user = User.objects.create_superuser(
             username="myUsername",

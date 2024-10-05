@@ -3,7 +3,9 @@ from .forms import CommentForm, UserPostForm, ProfileUpdateForm
 
 
 class TestCommentForm(TestCase):
-
+    """
+    View to test comment form.
+    """
     def test_form_is_valid(self):
         form = CommentForm({'body': 'This is a great post'})
         self.assertTrue(
@@ -16,7 +18,9 @@ class TestCommentForm(TestCase):
 
 
 class TestUserPostForm(TestCase):
-
+    """
+    View to test user add post form. 
+    """
     def test_form_is_valid(self):
         form_data = {
             'title': 'Sample Post',
@@ -39,6 +43,9 @@ class TestUserPostForm(TestCase):
 
 
 class TestProfileUpdateForm(TestCase):
+    """
+    View to test profile update form. 
+    """
 
     def test_form_is_valid(self):
         form_data = {

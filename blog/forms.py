@@ -5,6 +5,10 @@ from django_summernote.widgets import SummernoteWidget
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Comment form.
+    adds styling so comment box appears smaller on the page. 
+    """
     class Meta:
         model = Comment
         fields = ('body',)
@@ -21,6 +25,10 @@ class CommentForm(forms.ModelForm):
 
 
 class UserPostForm(forms.ModelForm):
+    """
+    User post form
+    Uses summernote text editor as content field.
+    """
     class Meta:
         model = Post
         fields = ('title', 'excerpt', 'content', 'featured_image')
@@ -31,6 +39,9 @@ class UserPostForm(forms.ModelForm):
 
 
 class ProfileUpdateForm(forms.ModelForm):
+    """
+    Form to update profile information. 
+    """
     class Meta:
         model = Profile
         fields = ['bio', 'location', 'profile_img', ]
