@@ -25,6 +25,8 @@ Back to [README.md](README.md) file.
     - [Registered User Stories](#resgistered-user-stories)
     - [Admin User Stories](#admin-user-stories)
 
+- [UI](#ui)
+
 - [Bugs](#bugs)
 
 - [Browser Compatibility](#browser-compatibility)
@@ -44,6 +46,7 @@ screenshot of validator results
 
 ## Python Unit Testing
 Results for testing report can be found in [test_report.txt](test_report.txt) which I generated using the 'python manage.py test -v 2 > test_report.txt' command in the terminal.
+(screenshot of python unittest in terminal)
 
 ### Automated Testing
 screenshot of test results for automated testing. Testing functions can be found in these files:
@@ -51,6 +54,8 @@ screenshot of test results for automated testing. Testing functions can be found
 [Blog/ Test Views](blog/test_views.py)
 [About/ Test Forms](about/test_forms.py)
 [About/ Test Views](about/test_views.py)
+
+(screenshot of test results from terminal)
 
 ## Manual Testing
 Create a different grid for each title, rows are individual items to test, cols are : 'test case' , 'action', 'acceptance criteria', 'result'
@@ -93,6 +98,8 @@ Create a different grid for each title, rows are individual items to test, cols 
 ""
 ### Admin User Stories
 ""
+## UI 
+(include issue with all UI issues included, list attempted fixes)
 
 ## Bugs
 (Similar to user story grid, add bug issues documented in project and add acceptance criteria results, any notes.)
