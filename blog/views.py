@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment, Profile, Like
+from .models import Post, Comment, Profile
 from .forms import CommentForm, UserPostForm, ProfileUpdateForm
 import bleach
 
