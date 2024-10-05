@@ -57,16 +57,34 @@ I used [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to
 
 
 ### Javascript
-I used [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my style.css file, I got these results:
+I used [JSHint](https://jshint.com/) to validate my style.css file, I got these results:
 
 | Test File | Result | Notes | Result Screenshot |
 | ------------ | ------------ | ------------ | ------------ |
-| comments.js | Pass | No errors | <details><summary>CSS Warnings</summary><img src="docs/testing-md/validations"></details> |
-
+| comments.js | Pass | No errors - Warnings listed in screenshot | <details><summary>Comment Warnings</summary><img src="docs/testing-md/validations/js-val-comment-js.png"></details><details><summary>Comment Warnings</summary><img src="docs/testing-md/validations/js-val-comment-js-1.png"></details> |
+| summernote-init.js | Pass | No errors - warnings listed in screenshot | <details><summary>Summernote Warnings</summary><img src="docs/testing-md/validations/js-val-summernote.png"></details>
 
 
 ### Python
-screenshot of validator results
+I used [The CI Python Linter](https://pep8ci.herokuapp.com/) to validate my python files, I got these results:
+
+| Test File | Result | Notes | Result Screenshot |
+| ------------ | ------------ | ------------ | ------------ |
+| blog/views.py | Pass | No errors | <details><summary>blog/views.py</summary><img src="docs/testing-md/validations/py-val-blog-views.png"></details> |
+| blog/urls.py | Pass | No errors | <details><summary>blog/urls.py</summary><img src="docs/testing-md/validations/py-val-blog-urls.png"></details> |
+| blog/test_views.py | Pass | No errors | <details><summary>blog/test_views.py</summary><img src="docs/testing-md/validations/py-val-blog-test-views.png"></details> |
+| blog/test_forms.py | Pass | No errors | <details><summary>blog/test_forms.py</summary><img src="docs/testing-md/validations/py-val-blog-test-forms.png"></details> |
+| blog/forms.py | Pass | No errors | <details><summary>blog/forms.py</summary><img src="docs/testing-md/validations/py-val-blog-forms.png"></details> |
+| blog/models.py | Pass | No errors | <details><summary>blog/models.py</summary><img src="docs/testing-md/validations/py-val-blog-models.png"></details> |
+| blog/apps.py | Pass | No errors | <details><summary>blog/apps.py</summary><img src="docs/testing-md/validations/py-val-blog-apps.png"></details> |
+| blog/admin.py | Pass | No errors | <details><summary>blog/admin.py</summary><img src="docs/testing-md/validations/py-val-blog-admin.png"></details> |
+| about/views.py | Pass | No errors | <details><summary>about/views.py</summary><img src="docs/testing-md/validations/py-val-about-views.png"></details> |
+| about/test_views.py | Pass | No errors | <details><summary>about/test_views.py</summary><img src="docs/testing-md/validations/py-val-blog-test-views.png"></details> |
+| about/test_forms.py | Pass | No errors | <details><summary>about/test_forms.py</summary><img src="docs/testing-md/validations/py-val-about-test-forms.png"></details> |
+| about/models.py | Pass | No errors | <details><summary>about/models.py</summary><img src="docs/testing-md/validations/py-val-about-models.png"></details> |
+| about/admin.py | Pass | No errors | <details><summary>about/admin.py</summary><img src="docs/testing-md/validations/py-val-about-admin.png"></details> |
+
+
 
 ## Python Unit Testing
 Results for testing report can be found in [test_report.txt](test_report.txt) which I generated using the 'python manage.py test -v 2 > test_report.txt' command in the terminal.
