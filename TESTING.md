@@ -88,48 +88,64 @@ I used [The CI Python Linter](https://pep8ci.herokuapp.com/) to validate my pyth
 
 ## Python Unit Testing
 Results for testing report can be found in [test_report.txt](test_report.txt) which I generated using the 'python manage.py test -v 2 > test_report.txt' command in the terminal.
-(screenshot of python unittest in terminal)
+
+<details><summary>Python Unittest Result</summary> <img src="docs/testing-md/py-unittest-screenshot.png"></details>
+
 
 ### Automated Testing
-screenshot of test results for automated testing. Testing functions can be found in these files:
+Testing functions can be found in these files:
 [Blog/Test Forms](blog/test_forms.py)
 [Blog/ Test Views](blog/test_views.py)
 [About/ Test Forms](about/test_forms.py)
 [About/ Test Views](about/test_views.py)
 
-(screenshot of test results from terminal)
+<details><summary>Automated testing</summary> <img src="docs/testing-md/automated-test-results.png"></details>
 
 ## Manual Testing
-Create a different grid for each title, rows are individual items to test, cols are : 'test case' , 'action', 'acceptance criteria', 'result'
+Extensive Manual Testing was carried out during the duration of this project. I tried to test each feature/link upon creating them, I have also included screenshots of the testing grids I created.
 ### Home Page
-#### Links and Buttons 
-#### Display and Images 
-#### Responsive Design Grid 
+<details><summary>Links and Buttons </summary> <img src="docs/testing-md/man-testing-home-links.jpg"></details>
+
+<details><summary>Display and Images</summary> <img src="docs/testing-md/man-testing-home-display.jpg"></details>
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-md/man-testing-home-responsive.jpg"></details>
+
 
 ### Post Detail Page
-#### Links and Buttons 
-#### Display and Images 
-#### Responsive Design Grid 
+<details><summary>Links and Buttons </summary> <img src="docs/testing-md/man-testing-post-detail-links.jpg"></details>
+
+<details><summary>Display and Images</summary> <img src="docs/testing-md/man-testing-post-detail-display.jpg"></details>
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-md/man-testing-post-detail-responsive.jpg"></details>
 
 ### About Page
-#### Links and Buttons 
-#### Display and Images 
-#### Responsive Design Grid 
+<details><summary>Links and Buttons </summary> <img src="docs/testing-md/man-testing-about-links-buttons.jpg"></details>
+
+<details><summary>Display and Images</summary> <img src="docs/testing-md/man-testing-about-display.jpg"></details>
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-md/man-testing-about-responsive.jpg"></details>
+
 
 ### Profile Page
-- Links and Buttons 
-- Display and Images 
-- Responsive Design Grid 
+<details><summary>Links and Buttons </summary> <img src="docs/testing-md/man-testing-profile-links.jpg"></details>
+
+<details><summary>Display and Images</summary> <img src="docs/testing-md/man-testing-profile-display.jpg"></details>
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-md/man-testing-profile-responsive.jpg"></details>
 
 ### Sign Up/ Sign In/ Sign Out Pages
-#### Links and Buttons 
-#### Display and Images 
-#### Responsive Design Grid 
+<details><summary>Links and Buttons </summary> <img src="docs/testing-md/man-testing-sign-up-links-buttons.jpg"></details>
+
+* Display / Images : No images used on this section. Display has no errors.
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-md/man-testing-signup-responsive.jpg"></details>
 
 ### Update/ Delete Profile Page
-#### Links and Buttons 
-#### Display and Images 
-#### Responsive Design Grid 
+<details><summary>Links and Buttons </summary> <img src="docs/testing-md/man-testing-post-detail-links.jpg"></details>
+
+* Display / Images : No images used on this section. Display has no errors.
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-md/man-testing-update-delete-responsive.jpg"></details>
 
 ## User Story Testing
 
@@ -147,7 +163,7 @@ Create a different grid for each title, rows are individual items to test, cols 
 (Similar to user story grid, add bug issues documented in project and add acceptance criteria results, any notes.)
 
 ## Browser Compatibility
-(screenshot of grid with compatibilaty results for safari, chrome, firefox on laptop, ipad pro and iphone pro -- use pages app)
+<details><summary>Browser Compatibility Grid </summary> <img src="docs/testing-md/browser-compatibility.jpg"></details>
 
 ## Lighthouse Test Result
 screenshots of all results 
