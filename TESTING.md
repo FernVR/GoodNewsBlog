@@ -37,6 +37,20 @@ Back to [README.md](README.md) file.
 ### HTML 
 Dont forget : Test source code from final deployed version
 ( create a graph with all html page results: home, about, user profile, register, login, logout, update profile, delete profile. )
+
+| Page | Result | Notes | Result Screenshot |
+| ------------ | ------------ | ------------ | ------------ |
+| Home | Pass | No errors | <details><summary>Home</summary><img src="docs/testing-md/validations/html-val-home.png"></details> |
+| Post Detail | Pass | No errors | <details><summary>Post Detail</summary><img src="docs/testing-md/validations/html-val-post-detail.png"></details> |
+| About | Pass | No errors | <details><summary>About</summary><img src="docs/testing-md/validations/html-val-about.png"></details> |
+| User Profile | Pass | The errors caused by SummerNote Widget. Removed Widget and tested, no errors were returned. | <details><summary>Profile Errors</summary><img src="docs/testing-md/validations/html-val-profile-page.png"></details><details><summary>Profile Errors </summary><img src="docs/testing-md/validations/html-val-profile-page-1.png"></details><details><summary>Profile Errors</summary><img src="docs/testing-md/validations/html-val-profile-page-3.png"></details> |
+| Update Profile | Pass | No errors | <details><summary>Profile Update</summary><img src="docs/testing-md/validations/html-val-update.png"></details> |
+| Delete Profile | Pass | No errors | <details><summary>Delete Profile</summary><img src="docs/testing-md/validations/html-val-delete.png"></details> |
+| Register/Sign Up | Pass | Errors are are related to built in Django form template  | <details><summary>Sign Up Error</summary><img src="docs/testing-md/validations/html-val-signup-error.png"></details><details><summary>Sign Up</summary><img src="docs/testing-md/validations/html-val-signup.png"></details> |
+| Sign In/Sign Out | Pass | No errors | <details><summary>Sign In</summary><img src="docs/testing-md/validations/html-val-login.png"></details><details><summary>Sign Out</summary><img src="docs/testing-md/validations/html-val-logout.png"></details> |
+
+
+
 ### CSS
 screenshot of validator results
 ### Javascript
