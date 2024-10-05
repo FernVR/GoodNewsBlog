@@ -5,29 +5,31 @@ from .forms import CollaborateForm
 
 # Create your views here.
 
+
 def about_me(request):
     """
     Renders the About page
     """
     # Fetch the most recent About entry
     about = About.objects.all().order_by('-updated_on').first()
-    
+
     # Initialize the form
     collaborate_form = CollaborateForm()
 
     if request.method == "POST":
         # Populate the form with POST data
         collaborate_form = CollaborateForm(data=request.POST)
-        
+
         # Check if the form is valid
         if collaborate_form.is_valid():
             # Save the valid form data
             collaborate_form.save()
             messages.add_message(
-                request, messages.SUCCESS, 
+                request, messages.SUCCESS,
                 "Your feedback has been sent. Thank you!"
             )
-            return redirect(reverse('about'))  # Redirect after successful submission
+            # Redirect after successful submission
+            return redirect(reverse('about'))
         else:
             # Optionally, you can add an error message here
             messages.error(request, "Please correct the errors below.")  

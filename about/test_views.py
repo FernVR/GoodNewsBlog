@@ -25,7 +25,8 @@ class TestAboutViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "About Title")
         self.assertContains(response, "About Content")
-        self.assertIsInstance(response.context['collaborate_form'], CollaborateForm)
+        self.assertIsInstance(
+            response.context['collaborate_form'], CollaborateForm)
 
     def test_about_me_view_post_valid_form(self):
         response = self.client.post(reverse('about'), {
@@ -41,7 +42,4 @@ class TestAboutViews(TestCase):
         messages_list = list(messages.get_messages(response.wsgi_request))
         self.assertTrue(len(messages_list) > 0)
         self.assertEqual(str(messages_list[0]), 
-                        "Your feedback has been sent. Thank you!")
-
-
-    
+                         "Your feedback has been sent. Thank you!")
