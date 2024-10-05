@@ -1,6 +1,6 @@
 # Good News Blog
 
-![Main Image - I am Responsive screenshot]()
+![Main Image - I am Responsive screenshot](docs/i-am-responsive-goodnews.png)
 
 [Good News Blog - Deployed Link](https://goodnewsblog-b3d97592edc2.herokuapp.com/)
 

@@ -1,6 +1,8 @@
 # Testing 
 Back to [README.md](README.md) file.
 
+![Main Image - I am Responsive screenshot](docs/i-am-responsive-goodnews.png)
+
 # Contents 
 - [Code Validation](#code-validation)
     - [HTML](#html)
