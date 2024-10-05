@@ -35,8 +35,7 @@ Back to [README.md](README.md) file.
 
 ## Code Validation
 ### HTML 
-Dont forget : Test source code from final deployed version
-( create a graph with all html page results: home, about, user profile, register, login, logout, update profile, delete profile. )
+I used [The W3C Markup Validation Service](https://validator.w3.org/) to validate all HTML pages by inputting the source code into the direct input field, these were my results:
 
 | Page | Result | Notes | Result Screenshot |
 | ------------ | ------------ | ------------ | ------------ |
@@ -49,12 +48,23 @@ Dont forget : Test source code from final deployed version
 | Register/Sign Up | Pass | Errors are are related to built in Django form template  | <details><summary>Sign Up Error</summary><img src="docs/testing-md/validations/html-val-signup-error.png"></details><details><summary>Sign Up</summary><img src="docs/testing-md/validations/html-val-signup.png"></details> |
 | Sign In/Sign Out | Pass | No errors | <details><summary>Sign In</summary><img src="docs/testing-md/validations/html-val-login.png"></details><details><summary>Sign Out</summary><img src="docs/testing-md/validations/html-val-logout.png"></details> |
 
-
-
 ### CSS
-screenshot of validator results
+I used [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my style.css file, I got these results:
+
+| Test | Result | Notes | Result Screenshot |
+| ------------ | ------------ | ------------ | ------------ |
+| style.css | Pass | Recieved 5 warnings (screenshot included) | <details><summary>Result</summary><img src="docs/testing-md/validations/css-validator-result.png"></details><details><summary>CSS Warnings</summary><img src="docs/testing-md/validations/css-validator-warnings.png"></details> |
+
+
 ### Javascript
-screenshot of validator results
+I used [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my style.css file, I got these results:
+
+| Test File | Result | Notes | Result Screenshot |
+| ------------ | ------------ | ------------ | ------------ |
+| comments.js | Pass | No errors | <details><summary>CSS Warnings</summary><img src="docs/testing-md/validations"></details> |
+
+
+
 ### Python
 screenshot of validator results
 
