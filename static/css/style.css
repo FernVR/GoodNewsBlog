@@ -315,13 +315,6 @@ body {
 }
 
 
-
-/* Temporarily pushing contact form lower down */
-
-#contact {
-    margin-top: 200px;
-}
-
 /* ------------------------------------------------------------------------------------------------------- User Profile Page */
 
 .profile-landing-banner {
@@ -366,7 +359,6 @@ body {
 
 /* ------------------------------------------------------------------------------------------------------ Update Profile */
 
-/* Form box styles */
 .update-card {
     background-color: #FF44A7;
     color: #000;
@@ -379,7 +371,6 @@ form .form-group {
     margin-bottom: 1.5rem;
 }
 
-/* Align and space the submit button */
 button[type="submit"] {
     margin-top: 1rem;
     background-color: #000;
