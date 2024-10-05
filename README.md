@@ -2,7 +2,7 @@
 
 ![Main Image - I am Responsive screenshot]()
 
-[Deployed Link]()
+[Good News Blog - Deployed Link](https://goodnewsblog-b3d97592edc2.herokuapp.com/)
 
 Welcome to GoodNewsBlog, a website dedicated to spreading positivity by sharing uplifting and feel-good news stories from around the world. Our platform is designed to highlight the good in humanity, showcasing inspiring acts of kindness, success stories, heartwarming events, and everyday heroes. Whether it’s stories about communities coming together, individuals making a difference, or milestones worth celebrating, GoodNewsBlog aims to be your go-to source for optimism and encouragement. We believe that positive news has the power to uplift, motivate, and remind us of the brighter side of life. Join us in making the world a little bit better, one story at a time!
 
@@ -88,41 +88,47 @@ Overall, GoodNewsBlog appeals to anyone who wants to focus on the brighter side 
 ## Agile Methodology
 ### Overview
 In the GoodNewsBlog development stages, the Agile methodology was used to manage development through iterative and incremental progress. Key features like the comment section, profile updates, and post interactions were implemented in short sprints, allowing for continuous improvement and feedback. Each iteration focused on adding specific functionalities, such as enabling users to post blogs or add comments, ensuring that the project evolved incrementally. Collaboration, regular feedback, and adaptability were prioritized, ensuring that the project could be adjusted based on user needs and technical requirements as it progressed.
+
 ### GitHub Projects
 I created 5 seperate GitHub project boards for this project, one to represent each iteration. Each project includes issues for each iteration, with all tasks attached to the issue, so I could check off the task boxes when completing a new task.
 
 ##### Iteration 1 
-![Screenshot of kanban board iteration 1]()
+![Screenshot of kanban board iteration 1](docs/readme-md/board-iteration-one.png)
 
 ##### Iteration 2
-![Screenshot of kanban board iteration 2]()
+![Screenshot of kanban board iteration 2](docs/readme-md/board-iteration-2.png)
 
 ##### Iteration 3
-![Screenshot of kanban board iteration 3]()
+![Screenshot of kanban board iteration 3](docs/readme-md/board-iteration-3.png)
 
 ##### Iteration 4
-![Screenshot of kanban board iteration 4]()
+![Screenshot of kanban board iteration 4](docs/readme-md/board-iteration-4.png)
 
 ##### Iteration 5 
-![Screenshot of kanban board iteration 5]()
+![Screenshot of kanban board iteration 5](docs/readme-md/board-iteration-5.png)
 
 ### Epics
 The epics/iterations for this project were divided into stages of development, trying to prioritise the most important tasks first and leaving the testing and validation for the final iteration. I tried my best to keep the most relevant user stories grouped together when planning the iterations and I included a brief description of each epic on my projects. (link projects page)
 
 #### Iteration 1 :
 Create core functionality, superuser, and administrator tasks.
+[Link to full Kanban Board with all issues included in this Iteration](https://github.com/users/FernVR/projects/2)
 
 #### Iteration 2 :
 Create register, login, logout functionality with basic structure added to HTML Templates.
+[Link to full Kanban Board with all issues included in this Iteration](https://github.com/users/FernVR/projects/3)
 
 #### Iteration 3 :
 Creating basic functionality on home page, blog posts page and about page. (Comments, add posts, likes, forms).
+[Link to full Kanban Board with all issues included in this Iteration](https://github.com/users/FernVR/projects/4)
 
 #### Iteration 4 :
 Style/polish all views.
+[Link to full Kanban Board with all issues included in this Iteration](https://github.com/users/FernVR/projects/5)
 
 #### Iteration 5 :
 All Manual and Automated Testing tasks/issues for Good News Blog and all documentation tasks.
+[Link to full Kanban Board with all issues included in this Iteration](https://github.com/users/FernVR/projects/6/views/1)
 
 ### User Stories
 The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
@@ -182,56 +188,102 @@ Some examples of admin user stories used in GoodNewsBlog:
 
 ## Wireframes
 I used Figma to create basic wireframes for standard screensizes:
-![Screenshot of wireframes]()
+<details><summary>Home Page</summary><img src="docs/readme-md/wireframes/wireframe-goodnews-home.png"></details>
+<details><summary>Contact</summary><img src="docs/readme-md/wireframes/wireframe-goodnews-contact-footer.png"></details>
+<details><summary>Post Detail</summary><img src="docs/readme-md/wireframes/wireframe-goodnews-articles.png"></details>
+<details><summary>Comments</summary><img src="docs/readme-md/wireframes/wireframe-goodnews-comments.png"></details>
+<details><summary>Add Post</summary><img src="docs/readme-md/wireframes/wireframe-goodnews-createpost-example.png"></details>
+<details><summary>Sign Up/Sign In</summary><img src="docs/readme-md/wireframes/wireframe-goodnews-signup-signin.png"></details>
+
 
 ## Database Schema
 I used Lucid Chart to create basic Entity Relationship Diagrams for database schema:
-![Screenshot of ERDS]()
+- Note : I ended up deleting like model, view and urls because it was causing errors I couldn't fix, like model is included in ERD for future features purposes.
+
+![Screenshot of ERDS](docs/readme-md/pp4-ERD.png)
 
 ## Design and Layout
 ### Typography
-Talk about font used and why:
+
+Inika Font is a serif typeface designed with elegance and readability in mind. Its soft, well-balanced letterforms make it ideal for both print and digital platforms. I decided to use this font for:
+- Readability: The serif design enhances legibility, especially in longer articles, making it perfect for news content.
+- Professional Aesthetic: Inika has a formal yet approachable look, adding credibility to journalistic content.
+- Versatility: It works well on various screen sizes, providing a consistent reading experience on mobile and desktop.
+- Distinctive Style: Its unique design helps a news blog stand out while maintaining a polished appearance.
 ### Colour Scheme
-![Screenshot of Colour schemes]()
+![Screenshot of Colour schemes](docs/readme-md/colour-pallete.png)
 
 ### Images
-short paragraph about images used 
-![Screenshot of Images]()
+I tried to carefully select the images to match the overall theme and aesthetic of the site. I tried to use complimenting colours where possible.
+<details><summary>Home Page Banner</summary><img src="static/images/goodnews-home.png"></details>
+<details><summary>About Page Banner</summary><img src="static/images/about-bg-1.png"></details>
+<details><summary>Profile Page</summary><img src="static/images/friends-bg-landing-1.png"></details>
 
 ### Responsiveness
 Website is response across all device screen sizes :
-![Screenshot of different screen sizes]()
+<details><summary>Home Page Mobile</summary><img src=""></details>
+<details><summary>Home Page Tablet</summary><img src=""></details>
+<details><summary>Home Page Desktop</summary><img src=""></details>
+
+<details><summary>Profile Page Mobile</summary><img src=""></details>
+<details><summary>Profile Page Tablet</summary><img src=""></details>
+<details><summary>Profile Page Laptop</summary><img src=""></details>
+
+- More responsive testing grids included within [TESTING.md](TESTING.md)
 
 ## Features
 ### Existing Features
 #### Home Page 
-overview of home page features, include screenshots. (navigation, content, footer)
+- Registered users and visitors can access the blog post list on the home page, can access links on the navigation and footer sections.
+<details><summary>Navigtion</summary><img src=""></details>
+<details><summary>Footer</summary><img src=""></details>
+<details><summary>Post List</summary><img src=""></details>
 
 #### Post Detail
-overview of post detail features, include screenshots. (read post, access full photograph, add comments, edit/delete comments.)
+- Users can view full articles and read comments, registered users can add comments, edit and delete the comments they have added.
+<details><summary>Full Article</summary><img src=""></details>
+<details><summary>Comments</summary><img src=""></details>
+<details><summary>Add Comment</summary><img src=""></details>
+<details><summary>Edit Comment</summary><img src=""></details>
+<details><summary>Delete Comment</summary><img src=""></details>
 
 #### About Page 
-overview of about page, include screenshots. (about content, contact form)
+- Visitors can read about the site's goals and objectives on the about page, they can also submit a feedback form if they wish.
+<details><summary>Content</summary><img src=""></details>
+<details><summary>Contact Form</summary><img src=""></details>
 
 #### Register/Login/Logout Page
-overview of register, login , logout features, include screenshots. 
+- Visitors can register as a new user, registered users can log in and log out to keep their accounts safe.
+<details><summary>Register New User</summary><img src=""></details>
+<details><summary>Sign In</summary><img src=""></details>
+<details><summary>Sign Out</summary><img src=""></details>
 
 #### User Profile Page (registered users)
-overview of profile page, include screenshots (user information, update/delete profile, create user post)
+- Registered users can access their profile page to add or manage their blog posts. Users can also update or delete their profile information if they wish.
+<details><summary>User Profile Page</summary><img src=""></details>
+<details><summary>Update Profile Form</summary><img src=""></details>
+<details><summary>Delete User Profile</summary><img src=""></details>
 
 ### Future Features
 #### Likes 
+- I attempted to create a like feature for this project but found myself running out of time before being able to fix the errors it was causing. I thought it was working ok until I tried to call the like/dislike buttons and caused a 500 error. Had I given myself a bit more time I would have definitely wanted to fix this issue and include it here. Would like to add this feature later in development.
+
 #### Drafts - edit posts etc ?
+- I have included a post list section of the user profile, so users can access and delete their added posts, but would later like to include an option for a user to be able to edit their posts too, whether they are approved or unnapproved.
+
 #### Small/Medium text field for 'add user post' section
+- I had an issue with using the summernote text editor as my content field for the add post section, the editor was too large for small/medium screens and was greatly pushing the content off the screen. I couldn't find a way to change the size of the editor/ include a different editor for smaller screens, but I would like to find a way to include this feature on small screens so the feature can be accessed by users on any device. ( This bug is recorded in the bug section of my Testing file, [TESTING.md](TESTING.md) )
 
 ### Issues and Bugs 
 #### Resolved Bugs 
-Include info of resolved bugs documented in Issues - include screenshots of issues and fixes.
+* All bug-related documentation can be found within [TESTING.md](TESTING.md)
+* All recorded resolved bugs can also be found within [Github Issues](https://github.com/FernVR/GoodNewsBlog/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 #### Unresolved Bugs
-Include info of unresolved bugs documented in issues - inlcude screenshot of issues and attempts to fix.
+* All bug-related documentation can be found within [TESTING.md](TESTING.md)
+* All recorded resolved bugs can also be found within [Github Issues](https://github.com/FernVR/GoodNewsBlog/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
 ## Testing
-LINK TO TESTING.md FILE
+* All testing documentation can be found within [TESTING.md](TESTING.md)
 
 ## Technologies Used
 ### Languages Used
@@ -324,14 +376,32 @@ The deployment is made using [Heroku](https://www.heroku.com/) following the lis
 * I took a lot of my inspiration for this project from the CI PP4 Walkthrough project that was also a blog. I used some of the models and view functions to create a basic structure and plan for my own functions, though I added a lot of different functionality.
 
 * I took some inspiration from these youtube channels, as well as this documentation to help me learn django and implement different features:
-(list of links)
+    - [Codemy.com](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+    - [Tech With Tim](https://www.youtube.com/watch?v=nGIg40xs9e4)
+    - [Python Simplified](https://www.youtube.com/watch?v=EEiqGjCNLRs)
+    - [Medium.com](https://medium.com/@singhgautam7/django-annotations-steroids-to-your-querysets-766231f0823a)
+    - [Treehouse.com](https://teamtreehouse.com/)
+
 
 ### Content
-* I used some news articles from this website (include link).
+* I used some news articles from these websites (include link).
+    - [The Good News Hub](https://thegoodnewshub.com/)
+    - [NPR](https://www.npr.org/)
 
 ### Media 
 * All banner images, post featured images and user profile photos were taken from [Unsplash](https://unsplash.com)
-(list of image links)
+    - [Duck Img - placeholder](https://unsplash.com/photos/a-duck-standing-on-top-of-a-rock-next-to-a-body-of-water-ys1F9ntKRfA)
+    - [Bike Img - article](https://unsplash.com/photos/a-man-riding-a-bike-next-to-a-dog-on-a-lush-green-hillside-pNsBOpod-tI)
+    - [Cat Img - article](https://unsplash.com/photos/orange-persian-cat-sleeping-9UUoGaaHtNE)
+    - [Jungle Img - article](https://unsplash.com/photos/a-leopard-in-the-middle-of-a-jungle-DSaL_3YwLu8)
+    - [Windmill Img - article](https://unsplash.com/photos/windmill-on-grass-field-during-golden-hour-0w-uTa0Xz7w)
+    - [Dogs Img - article](https://unsplash.com/photos/black-short-coated-dog-in-blue-and-brown-wooden-box-nbxffbJKPYc)
+    - [Leaves Img - article/profile img](https://unsplash.com/photos/yellow-and-green-leaves-during-daytime-CtLx4qCdhf8)
+    - [Water Img - article](https://unsplash.com/photos/rocks-on-sea-bed-U6dnImauDAE)
+    - [Birds Img - article](https://unsplash.com/photos/two-small-birds-perched-on-a-twig-KLylpBvo0ww)
+    - [Dog img - article](https://unsplash.com/photos/shallow-focus-photography-of-white-shih-tzu-puppy-running-on-the-grass-qO-PIF84Vxg)
+    - [Friends img - Profile Banner](https://unsplash.com/photos/people-holding-shoulders-sitting-on-wall-Cecb0_8Hx-o)
+    - [Newspaper img - Home Banner](https://unsplash.com/photos/pile-of-newspapers-H6eaxcGNQbU)
 
 
 ## Acknowledgements
