@@ -12,7 +12,11 @@ import bleach
 # Create your views here.
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments', filter=Q(comments__approved=True))).order_by("-created_on")
+    queryset = Post.objects.filter(
+        status=1).annotate(
+            comment_count=Count(
+                'comments', filter=Q(
+                    comments__approved=True))).order_by("-created_on")
     template_name = "blog/index.html"
     paginate_by = 2
 
@@ -47,7 +51,6 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-    
     comment_form = CommentForm()
     user_post_form = UserPostForm()
 
@@ -82,10 +85,10 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
 
 
 def comment_delete(request, slug, comment_id):
@@ -100,7 +103,8 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -124,10 +128,10 @@ def user_profile(request):
                 request, messages.SUCCESS,
                 'Your post has been submitted and is awaiting approval.'
             )
-            return redirect('user_profile')  # Redirect to the user profile page after saving
+            return redirect('user_profile')  # Redirect to the user profile
 
     else:
-        user_post_form = UserPostForm()  # Initialize an empty form for GET requests
+        user_post_form = UserPostForm()
 
     return render(
         request,
@@ -144,11 +148,11 @@ def custom_404_view(request, exception):
     return render(request, '404.html', status=404)
 
 
-
 @login_required
 def profile_update_view(request):
     if request.method == 'POST':
-        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        profile_form = ProfileUpdateForm(
+            request.POST, request.FILES, instance=request.user.profile)
 
         if profile_form.is_valid():
             profile_form.save()
@@ -161,7 +165,6 @@ def profile_update_view(request):
     return render(request, 'blog/profile_update.html', {
         'profile_form': profile_form
     })
-
 
 
 @login_required
@@ -181,4 +184,6 @@ def post_delete(request, slug):
     if request.method == "POST":
         post.delete()
         messages.success(request, "Your post has been deleted.")
-        return redirect('user_profile')  # Redirect to the user's profile after deletion
+        return redirect('user_profile')  # Redirect to the user's profile
+
+
