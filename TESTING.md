@@ -90,7 +90,7 @@ Create a different grid for each title, rows are individual items to test, cols 
 #### Responsive Design Grid 
 
 ## User Story Testing
-### Developer User Stories
+
 (Grid with link to each user story, acceptance criteria results, notes)
 ### Visitor User Stories
 ""

@@ -15,9 +15,13 @@
         <div class="col-md-4">
             <div class="text-center text-white user-card mb-3">
                 <!-- Profile Picture -->
-                <img src="{% if request.user.profile.profile_img %}{{ request.user.profile.profile_img.url }}{% else %}{% static 'feat-img-example.png' %}{% endif %}"
+                <img src="{% if request.user.profile.profile_img %}
+                {{ request.user.profile.profile_img.url }}
+                {% else %}
+                {% static 'images/about-landing-banner' %}
+                {% endif %}"
                     class="card-img-top rounded-circle mt-3 mx-auto" alt="Profile Picture"
-                    style="width: 150px; height: 150px; object-fit: cover;">
+                    style="width: 150px; height: 150px; object-fit: cover;" >
                 <!-- Profile Info -->
                 <div class="card-body">
                     <h5 class="card-title">{{ request.user.username }}</h5>
