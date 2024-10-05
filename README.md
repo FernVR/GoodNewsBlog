@@ -222,6 +222,7 @@ overview of profile page, include screenshots (user information, update/delete p
 ### Future Features
 #### Likes 
 #### Drafts - edit posts etc ?
+#### Small/Medium text field for 'add user post' section
 
 ### Issues and Bugs 
 #### Resolved Bugs 

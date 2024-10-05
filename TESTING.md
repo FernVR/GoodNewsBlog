@@ -149,18 +149,45 @@ Extensive Manual Testing was carried out during the duration of this project. I 
 
 ## User Story Testing
 
-(Grid with link to each user story, acceptance criteria results, notes)
-### Visitor User Stories
-""
-### Resgistered User Stories
-""
 ### Admin User Stories
-""
-## UI 
-(include issue with all UI issues included, list attempted fixes)
+
+| User Story | Acceptance Criteria Complete | Screenshot/Notes |
+| ------------ | ------------ | ------------ | 
+| [Managing Comments](https://github.com/FernVR/GoodNewsBlog/issues/9) | Pass | <details><summary>Comments Admin Page</summary><img src=""></details> |
+| [Managing Posts](https://github.com/FernVR/GoodNewsBlog/issues/6) | Pass | <details><summary>Comments Admin Page</summary><img src=""></details> |
+
+### Visitor User Stories
+
+| User Story | Acceptance Criteria Complete | Screenshot/Notes |
+| ------------ | ------------ | ------------ | 
+| [Sign Up](https://github.com/FernVR/GoodNewsBlog/issues/12) | Pass | <details><summary>Sign Up Link</summary><img src=""></details><details><summary>Sign Up Form</summary><img src=""></details> |
+| [Scroll Blog Posts](https://github.com/FernVR/GoodNewsBlog/issues/10) | Pass | <details><summary>Post List - Home Page</summary><img src=""></details> |
+| [View Blog Posts](https://github.com/FernVR/GoodNewsBlog/issues/23) | Pass | <details><summary>Post Detail Page</summary><img src=""></details> |
+| [Visit About Page](https://github.com/FernVR/GoodNewsBlog/issues/7) | Pass | <details><summary>About Page</summary><img src=""></details><details><summary>Feedback Form</summary><img src=""></details> - Includes Feedback form |
+| [View Comments](https://github.com/FernVR/GoodNewsBlog/issues/45) | Pass | <details><summary>Comments- Logged Out</summary><img src=""></details> |
+
+### Resgistered User Stories
+
+| User Story | Acceptance Criteria Complete | Screenshot/Notes |
+| ------------ | ------------ | ------------ | 
+| [User Profile Page](https://github.com/FernVR/GoodNewsBlog/issues/26) | Pass | <details><summary>Profile Page</summary><img src=""></details> |
+| [Adding Comments](https://github.com/FernVR/GoodNewsBlog/issues/17) | Pass | <details><summary>Add Comment Form</summary><img src=""></details><details><summary>Edit Comment</summary><img src=""></details><details><summary>Delete Comment</summary><img src=""></details> |
+| [User Add Posts](https://github.com/FernVR/GoodNewsBlog/issues/18) | Pass | <details><summary>Add Post Form</summary><img src=""></details> | 
+| [User Delete Profile](https://github.com/FernVR/GoodNewsBlog/issues/52) | Pass | <details><summary>Delete Profile Message</summary><img src=""></details> |
+
 
 ## Bugs
-(Similar to user story grid, add bug issues documented in project and add acceptance criteria results, any notes.)
+
+| Bug/Issue | Resolved/Unresolved | Notes |
+| ------------ | ------------ | ------------ | 
+| [About Page - Nav and Footer UI Issue](https://github.com/FernVR/GoodNewsBlog/issues/29) | Resolved | added boostrap styles to all sections to ensure no content pushes the nav and footer. |
+| [Comment Count](https://github.com/FernVR/GoodNewsBlog/issues/28) | Resolved | Fixed using connotate and Q |
+| [User/ Profile](https://github.com/FernVR/GoodNewsBlog/issues/43) | Resolved | added signals to create profile page when new user is created |
+| [Text field on user post form](https://github.com/FernVR/GoodNewsBlog/issues/44) | Resolved | Added add post section only to users with larger screen resolutions - would like to include a small/medium size text field later, so feature is available to all users on different devices - documented in Future Features section of [README.md](README.md) |
+| [Comment Section - responsive design](https://github.com/FernVR/GoodNewsBlog/issues/47) | Resolved/Partially | User information on comment section and comments are still not spaced correctly, larger comments squash too close together. This is because of the display flex on both of those sections, but I kept it as it was because it looks correct on medium/larger screens. 
+| [User Profile Page - UI Issue](https://github.com/FernVR/GoodNewsBlog/issues/50) | Unresolved | <details><summary>Profile Page UI Bug</summary> <img src=""></details> Couldn't fix the push on nav and footer content after attempting to with adjusting all boostrap classes and styling on each section, I think the issue is coming from the post list section, but I can't figure out exactly. |
+| [Contact app/Django Crispy Form](https://github.com/FernVR/GoodNewsBlog/issues/27) | Unresolved | I deleted the contact app as I was only going to use it for the form, I included the form within the About section instead. |
+
 
 ## Browser Compatibility
 <details><summary>Browser Compatibility Grid </summary> <img src="docs/testing-md/browser-compatibility.jpg"></details>
