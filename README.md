@@ -235,40 +235,42 @@ Website is response across all device screen sizes :
 ### Existing Features
 #### Home Page 
 - Registered users and visitors can access the blog post list on the home page, can access links on the navigation and footer sections.
-<details><summary>Navigtion</summary><img src=""></details>
-<details><summary>Footer</summary><img src=""></details>
-<details><summary>Post List</summary><img src=""></details>
+<details><summary>Navigtion- Logged Out</summary><img src="docs/readme-md/features/home-nav-loggedout.png"></details>
+<details><summary>Navigtion- Logged In</summary><img src="docs/readme-md/features/home-nav-loggedin.png"></details>
+<details><summary>Footer</summary><img src="docs/readme-md/features/home-footer.png"></details>
+<details><summary>Post List</summary><img src="docs/readme-md/features/home-page.png"></details>
 
 #### Post Detail
 - Users can view full articles and read comments, registered users can add comments, edit and delete the comments they have added.
-<details><summary>Full Article</summary><img src=""></details>
-<details><summary>Comments</summary><img src=""></details>
-<details><summary>Add Comment</summary><img src=""></details>
-<details><summary>Edit Comment</summary><img src=""></details>
-<details><summary>Delete Comment</summary><img src=""></details>
+<details><summary>Full Article</summary><img src="docs/readme-md/features/full-article.png"></details>
+<details><summary>Comments</summary><img src="docs/readme-md/features/comments.png"></details>
+<details><summary>Add Comment</summary><img src="docs/readme-md//features/adding-comments.png"></details>
+<details><summary>Edit Comment</summary><img src="docs/readme-md/features/updating-comment.png"></details>
+<details><summary>Delete Comment</summary><img src="docs/readme-md/features/delete-comment.png"></details>
 
 #### About Page 
 - Visitors can read about the site's goals and objectives on the about page, they can also submit a feedback form if they wish.
-<details><summary>Content</summary><img src=""></details>
-<details><summary>Contact Form</summary><img src=""></details>
+<details><summary>Content</summary><img src="docs/readme-md/features/about-content.png"></details>
+<details><summary>Contact Form</summary><img src="docs/readme-md/features/contact-form.png"></details>
 
 #### Register/Login/Logout Page
 - Visitors can register as a new user, registered users can log in and log out to keep their accounts safe.
-<details><summary>Register New User</summary><img src=""></details>
-<details><summary>Sign In</summary><img src=""></details>
-<details><summary>Sign Out</summary><img src=""></details>
+<details><summary>Register New User</summary><img src="docs/readme-md/features/sign-up-form.png"></details>
+<details><summary>Sign In</summary><img src="docs/readme-md/features/sign-in.png"></details>
+<details><summary>Sign Out</summary><img src="docs/readme-md/features/sign-out.png"></details>
 
-#### User Profile Page (registered users)
+#### User Profile Page
 - Registered users can access their profile page to add or manage their blog posts. Users can also update or delete their profile information if they wish.
-<details><summary>User Profile Page</summary><img src=""></details>
-<details><summary>Update Profile Form</summary><img src=""></details>
-<details><summary>Delete User Profile</summary><img src=""></details>
+<details><summary>User Profile Page</summary><img src="docs/readme-md/features/user-profile.png"></details>
+<details><summary>Add Post Form</summary><img src="docs/readme-md/features/add-post-form-2.png"></details>
+<details><summary>Update Profile Form</summary><img src="docs/readme-md/features/update-profile-form.png"></details>
+<details><summary>Delete User Profile</summary><img src="docs/readme-md/features/delete-profile.png"></details>
 
 ### Future Features
 #### Likes 
 - I attempted to create a like feature for this project but found myself running out of time before being able to fix the errors it was causing. I thought it was working ok until I tried to call the like/dislike buttons and caused a 500 error. Had I given myself a bit more time I would have definitely wanted to fix this issue and include it here. Would like to add this feature later in development.
 
-#### Drafts - edit posts etc ?
+#### Drafts / Edit Posts
 - I have included a post list section of the user profile, so users can access and delete their added posts, but would later like to include an option for a user to be able to edit their posts too, whether they are approved or unnapproved.
 
 #### Small/Medium text field for 'add user post' section
