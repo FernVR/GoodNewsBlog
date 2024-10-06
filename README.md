@@ -108,7 +108,8 @@ I created 5 seperate GitHub project boards for this project, one to represent ea
 ![Screenshot of kanban board iteration 5](docs/readme-md/board-iteration-5.png)
 
 ### Epics
-The epics/iterations for this project were divided into stages of development, trying to prioritise the most important tasks first and leaving the testing and validation for the final iteration. I tried my best to keep the most relevant user stories grouped together when planning the iterations and I included a brief description of each epic on my projects. (link projects page)
+The epics/iterations for this project were divided into stages of development, trying to prioritise the most important tasks first and leaving the testing and validation for the final iteration. I tried my best to keep the most relevant user stories grouped together when planning the iterations and I included a brief description of each epic on my projects. 
+[GitHub Projects](https://github.com/FernVR/GoodNewsBlog/projects?query=is%3Aopen)
 
 #### Iteration 1 :
 Create core functionality, superuser, and administrator tasks.
