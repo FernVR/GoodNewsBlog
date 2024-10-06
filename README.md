@@ -132,7 +132,7 @@ All Manual and Automated Testing tasks/issues for Good News Blog and all documen
 
 ### User Stories
 The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
-![Screenshot example of different issues with different labels.]()
+![Screenshot example of different issues with different labels.](docs/readme-md/issues-labels.png)
 
 ### Developer Stories
 Some examples of developer stories used in GoodNewsBlog:
@@ -221,13 +221,13 @@ I tried to carefully select the images to match the overall theme and aesthetic 
 
 ### Responsiveness
 Website is response across all device screen sizes :
-<details><summary>Home Page Mobile</summary><img src=""></details>
-<details><summary>Home Page Tablet</summary><img src=""></details>
-<details><summary>Home Page Desktop</summary><img src=""></details>
+<details><summary>Home Page Mobile</summary><img src="docs/readme-md/responsive/home-mobile.png"></details>
+<details><summary>Home Page Tablet</summary><img src="docs/readme-md/responsive/home-tablet.png"></details>
+<details><summary>Home Page Desktop</summary><img src="docs/readme-md/responsive/home-laptop.png"></details>
 
-<details><summary>Profile Page Mobile</summary><img src=""></details>
-<details><summary>Profile Page Tablet</summary><img src=""></details>
-<details><summary>Profile Page Laptop</summary><img src=""></details>
+<details><summary>Profile Page Mobile</summary><img src="docs/readme-md/responsive/profile-mobile.png"></details>
+<details><summary>Profile Page Tablet</summary><img src="docs/readme-md/responsive/profile-tablet.png"></details>
+<details><summary>Profile Page Laptop</summary><img src="docs/readme-md/responsive/profile-laptop.png"></details>
 
 - More responsive testing grids included within [TESTING.md](TESTING.md)
 
@@ -386,12 +386,12 @@ The deployment is made using [Heroku](https://www.heroku.com/) following the lis
 
 
 ### Content
-* I used some news articles from these websites (include link).
+* I used some news articles from these websites:
     - [The Good News Hub](https://thegoodnewshub.com/)
     - [NPR](https://www.npr.org/)
 
 ### Media 
-* All banner images, post featured images and user profile photos were taken from [Unsplash](https://unsplash.com)
+* All banner images, post featured images and user profile photos were taken from [Unsplash](https://unsplash.com) :
     - [Duck Img - placeholder](https://unsplash.com/photos/a-duck-standing-on-top-of-a-rock-next-to-a-body-of-water-ys1F9ntKRfA)
     - [Bike Img - article](https://unsplash.com/photos/a-man-riding-a-bike-next-to-a-dog-on-a-lush-green-hillside-pNsBOpod-tI)
     - [Cat Img - article](https://unsplash.com/photos/orange-persian-cat-sleeping-9UUoGaaHtNE)
